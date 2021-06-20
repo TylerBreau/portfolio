@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "./www",
+        "module": "CommonJS",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src/logic",
+        "paths": {
+            "@Logic/*": ["./*"]
+        }
+    },
+    "include": ["./src/logic/**/*.ts", "./src/logic/*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

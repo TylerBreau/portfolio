@@ -1,0 +1,10 @@
+
+import React from 'react';
+import {ComponentLogic} from '@Logic/ComponentLogic';
+
+export class ScreenLogic<IState = never, IProps = never> extends ComponentLogic<IState, IProps> {
+    constructor(node: React.Component) {
+        super(node);
+        this._addClassName('Screen');
+    }
+}
