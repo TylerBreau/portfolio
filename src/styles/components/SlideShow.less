@@ -1,0 +1,33 @@
+
+.SlideShow {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        flex: 0 0 50px;
+        border-bottom: 1px solid;
+
+        .header-item {
+            flex: 0 0 auto;
+            margin: auto 0;
+    
+            &:hover, &.active {
+                border-bottom: 1px solid;
+            }
+        }
+
+        .Divider {
+            margin-bottom: auto;
+            margin-top: auto;
+        }
+    }
+
+    .content {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+}
