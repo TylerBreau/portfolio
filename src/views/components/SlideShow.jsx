@@ -31,7 +31,7 @@ export class SlideShow extends React.Component {
         for (let i = 0, titles = this.$logic.getTitles(), length = titles.length; i < length; ++i) {
             titlesUI.push(this._createTitle(titles[i]));
             if (i + 1 < length) {
-                titlesUI.push(<Divider />);
+                titlesUI.push(<Divider key={i + 1 + '-divider'} />);
             }
         }
         return <div className={this.$logic.getClassName()}>
