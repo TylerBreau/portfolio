@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./src --ext .js,.jsx,.ts",
     "webpack": "webpack -c ./webpack.config.js",
-    "copy-statics": "cp ./src/index.html ./www/index.html && cp ./src/res/favicon.ico ./www/favicon.ico",
+    "copy-statics": "cp ./src/index.html ./www/index.html && cp ./src/res/favicon.ico ./www/favicon.ico && cp ./src/res/FluxArchitectureImage.png ./www/FluxArchitectureImage.png",
     "build": "npm run lint && npm run copy-statics && npm run webpack"
   },
   "eslintConfig": {
@@ -21,6 +21,7 @@
     "@babel/preset-react": "7.16.7",
     "@types/prop-types": "^15.7.4",
     "@types/react": "17.0.39",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "5.10.2",
     "@typescript-eslint/parser": "5.10.2",
     "babel-loader": "8.2.3",

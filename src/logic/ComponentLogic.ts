@@ -26,6 +26,7 @@ export class ComponentLogic<IState = never, IProps = never> {
         this.$classNames.push(name);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _initState(state: Partial<IState>) {}
 
     getClassName(): String {

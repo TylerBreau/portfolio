@@ -4,6 +4,7 @@ import '@Styles/screens/HomeScreen';
 import {HomeScreenLogic} from '@Logic/screens/HomeScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Divider} from '@Views/components/Divider';
+import {WorkExample} from '@Views/components/WorkExample';
 
 const EMAIL = 'tylerbreau@hotmail.com';
 
@@ -146,7 +147,24 @@ export class HomeScreen extends React.Component {
                     {
                         title: 'Work Examples',
                         render: () => {
-                            return <div className='slideshow-content examples' key='eaxmples'>work examples</div>;
+                            return <div className='slideshow-content examples' key='examples'>
+                                <WorkExample
+                                    title='Flux Architecture'
+                                    url='fluxarchitecture'
+                                >
+                                    <span>Lesson on Flux Architecture</span>
+                                    <ul>
+                                        <li>What is it?</li>
+                                        <li>How to implement it?</li>
+                                        <li>How should it be used?</li>
+                                    </ul>
+                                    <img src="FluxArchitectureImage.png" />
+                                </WorkExample>
+                                <WorkExample />
+                                <WorkExample />
+                                <WorkExample />
+                                <WorkExample />
+                            </div>;
                         }
                     }
                 ]}
