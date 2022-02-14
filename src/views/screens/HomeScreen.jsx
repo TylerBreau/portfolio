@@ -15,25 +15,6 @@ export class HomeScreen extends React.Component {
     }
 
     render() {
-        /*
-            1-About Me
-            introduce myself
-                include what my job and summarized expertise is (1 sentence for expertise)
-
-            include some kind of origin statement of why i got into programming, says something about my personality
-
-            2-work biography
-            brief description of what my expertise is
-
-            3-work examples
-                brief overviews of work examples, more detailed info can be on other pages. Maybe useNavigation hook will be used afterall?
-
-            4-contact information
-
-            UI plan?
-            slideshow with arrows on each side, infinite looping.
-            header above with a separate, maybe circle dots? Header should be clickable to skip to that view.
-        */
         return <div className={this.$logic.getClassName()}>
             <SlideShow
                 items={[
@@ -160,10 +141,6 @@ export class HomeScreen extends React.Component {
                                     </ul>
                                     <img src="FluxArchitectureImage.png" />
                                 </WorkExample>
-                                <WorkExample />
-                                <WorkExample />
-                                <WorkExample />
-                                <WorkExample />
                             </div>;
                         }
                     }
