@@ -1,24 +1,12 @@
 
 import React from 'react';
 import {ComponentLogic} from '@Logic/ComponentLogic';
-
-export interface ISlideShowItem {
-    title: string;
-    render: () => React.ReactNode;
-}
-
-export interface ISlideShowTitleItem {
-    title: string;
-    index: number;
-}
-
-export interface ISlideShowProps {
-    items: Array<ISlideShowItem>;
-}
-
-interface ISlideShowState {
-    index: number;
-}
+import {
+    ISlideShowItem,
+    ISlideShowTitleItem,
+    ISlideShowProps,
+    ISlideShowState
+} from '@Interfaces/components/ISlideShow';
 
 export class SlideShowLogic extends ComponentLogic<ISlideShowState, ISlideShowProps> {
     constructor(node: React.Component) {

@@ -1,12 +1,14 @@
 
 import React from 'react';
 import '@Styles/screens/FluxArchitecture';
-import {FluxArchitectureLogic} from '@Logic/screens/FluxArchitectureLogic';
+import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 
 export class FluxArchitectureScreen extends React.Component {
-    constructor(props) {
+    private $logic: FluxArchitectureScreenLogic;
+
+    constructor(props: never) {
         super(props);
-        this.$logic = new FluxArchitectureLogic(this);
+        this.$logic = new FluxArchitectureScreenLogic(this);
     }
 
     render() {

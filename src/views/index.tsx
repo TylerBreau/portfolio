@@ -5,7 +5,7 @@ import {Application} from '@Views/app/Application';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Application />
+        <Application key='app' />
     </React.StrictMode>,
     document.getElementById('root')
 );

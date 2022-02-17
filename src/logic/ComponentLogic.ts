@@ -2,7 +2,7 @@ import React from 'react';
 
 export class ComponentLogic<IState = never, IProps = never> {
     $node: React.Component;
-    $classNames: Array<String>;
+    $classNames: Array<string>;
 
     constructor(node: React.Component) {
         this.$node = node;
@@ -22,14 +22,14 @@ export class ComponentLogic<IState = never, IProps = never> {
      *
      * @param name
      */
-    _addClassName(name: String) {
+    _addClassName(name: string) {
         this.$classNames.push(name);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _initState(state: Partial<IState>) {}
 
-    getClassName(): String {
+    getClassName(): string {
         return this.$classNames.join(' ');
     }
 

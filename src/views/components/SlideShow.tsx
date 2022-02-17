@@ -2,15 +2,23 @@
 import React from 'react';
 import '@Styles/components/SlideShow';
 import {SlideShowLogic} from '@Logic/components/SlideShowLogic';
+import {
+    ISlideShow,
+    ISlideShowTitleItem,
+    ISlideShowProps,
+    ISlideShowState
+} from '@Interfaces/components/ISlideShow';
 import {Divider} from '@Views/components/Divider';
 
-export class SlideShow extends React.Component {
-    constructor(props) {
+export class SlideShow extends React.Component<ISlideShowProps, ISlideShowState> implements ISlideShow {
+    private $logic: SlideShowLogic;
+
+    constructor(props: ISlideShowProps) {
         super(props);
         this.$logic = new SlideShowLogic(this);
     }
 
-    _createTitle(titleData) {
+    _createTitle(titleData: ISlideShowTitleItem) {
         let className = 'header-item';
         if (titleData.index === this.$logic.getState().index) {
             className += ' active';

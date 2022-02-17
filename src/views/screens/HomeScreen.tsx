@@ -5,11 +5,14 @@ import {HomeScreenLogic} from '@Logic/screens/HomeScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Divider} from '@Views/components/Divider';
 import {WorkExample} from '@Views/components/WorkExample';
+import {ScreenURL} from '@Logic/utility/ScreenURL';
 
 const EMAIL = 'tylerbreau@hotmail.com';
 
 export class HomeScreen extends React.Component {
-    constructor(props) {
+    private $logic: HomeScreenLogic;
+
+    constructor(props: never) {
         super(props);
         this.$logic = new HomeScreenLogic(this);
     }
@@ -131,7 +134,7 @@ export class HomeScreen extends React.Component {
                             return <div className='slideshow-content examples' key='examples'>
                                 <WorkExample
                                     title='Flux Architecture'
-                                    url='fluxarchitecture'
+                                    url={ScreenURL.FLUX_ARCHITECTURE}
                                 >
                                     <span>Lesson on Flux Architecture</span>
                                     <ul>

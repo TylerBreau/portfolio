@@ -13,7 +13,9 @@ import {HomeScreen} from '@Views/screens/HomeScreen';
 import {FluxArchitectureScreen} from '@Views/screens/FluxArchitectureScreen';
 
 export class Application extends React.Component {
-    constructor(props) {
+    private $logic: ApplicationLogic;
+
+    constructor(props: never) {
         super(props);
         this.$logic = new ApplicationLogic(this);
     }
