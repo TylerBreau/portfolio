@@ -4,12 +4,14 @@ import '@Styles/screens/HomeScreen';
 import {HomeScreenLogic} from '@Logic/screens/HomeScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Divider} from '@Views/components/Divider';
+import {Header} from '@Views/components/Header';
 import {WorkExample} from '@Views/components/WorkExample';
 import {ScreenURL} from '@Logic/utility/ScreenURL';
+import {IHomeScreen, IHomeScreenState} from '@Interfaces/screens/IHomeScreen';
 
 const EMAIL = 'tylerbreau@hotmail.com';
 
-export class HomeScreen extends React.Component {
+export class HomeScreen extends React.Component<{}, IHomeScreenState> implements IHomeScreen {
     private $logic: HomeScreenLogic;
 
     constructor(props: never) {
@@ -19,10 +21,41 @@ export class HomeScreen extends React.Component {
 
     render() {
         return <div className={this.$logic.getClassName()}>
-            <SlideShow
+            <Header
                 items={[
                     {
-                        title: 'About Me',
+                        text: 'About Me',
+                        isActive: this.state.index === 0,
+                        onClick: () => {
+                            this.$logic.setState({
+                                index: 0
+                            });
+                        }
+                    },
+                    {
+                        text: 'Work Biography',
+                        isActive: this.state.index === 1,
+                        onClick: () => {
+                            this.$logic.setState({
+                                index: 1
+                            });
+                        }
+                    },
+                    {
+                        text: 'Work Examples',
+                        isActive: this.state.index === 2,
+                        onClick: () => {
+                            this.$logic.setState({
+                                index: 2
+                            });
+                        }
+                    }
+                ]}
+            />
+            <SlideShow
+                index={this.state.index}
+                items={[
+                    {
                         render: () => {
                             return <div className='slideshow-content aboutMe' key='aboutMe'>
                                 <div className='col1 col'>
@@ -63,7 +96,6 @@ export class HomeScreen extends React.Component {
                         }
                     },
                     {
-                        title: 'Work Biography',
                         render: () => {
                             return <div className='slideshow-content biography' key='biography'>
                                 <div className='entry summary'>
@@ -129,7 +161,6 @@ export class HomeScreen extends React.Component {
                         }
                     },
                     {
-                        title: 'Work Examples',
                         render: () => {
                             return <div className='slideshow-content examples' key='examples'>
                                 <WorkExample
