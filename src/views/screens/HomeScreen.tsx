@@ -3,13 +3,11 @@ import React from 'react';
 import '@Styles/screens/HomeScreen';
 import {HomeScreenLogic} from '@Logic/screens/HomeScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
-import {Divider} from '@Views/components/Divider';
+import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
 import {WorkExample} from '@Views/components/WorkExample';
 import {ScreenURL} from '@Logic/utility/ScreenURL';
 import {IHomeScreen, IHomeScreenState} from '@Interfaces/screens/IHomeScreen';
-
-const EMAIL = 'tylerbreau@hotmail.com';
 
 export class HomeScreen extends React.Component<{}, IHomeScreenState> implements IHomeScreen {
     private $logic: HomeScreenLogic;
@@ -180,13 +178,7 @@ export class HomeScreen extends React.Component<{}, IHomeScreenState> implements
                     }
                 ]}
             />
-            <div className='footer'>
-                <span className='col'>All Rights Reserved &#169;</span>
-                <Divider />
-                <address className='col'>
-                    <a className='email' href={`mailto:${EMAIL}`}>{EMAIL} (Preferred)</a>
-                </address>
-            </div>
+            <Footer />
         </div>;
     }
 }
