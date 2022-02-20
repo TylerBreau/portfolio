@@ -15,4 +15,8 @@ export class SlideShowLogic extends ComponentLogic<never, ISlideShowProps> {
     getActiveSlide(): ISlideShowItem {
         return this.getProps().items[this.getProps().index];
     }
+
+    getClassName(): string {
+        return super.getClassName() + ' ' + this.getProps().className;
+    }
 }

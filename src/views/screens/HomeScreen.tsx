@@ -51,6 +51,7 @@ export class HomeScreen extends React.Component<{}, IHomeScreenState> implements
                 ]}
             />
             <SlideShow
+                className='body'
                 index={this.state.index}
                 items={[
                     {

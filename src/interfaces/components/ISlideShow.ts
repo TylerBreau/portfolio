@@ -8,6 +8,7 @@ export interface ISlideShowItem {
 export interface ISlideShowProps {
     items: Array<ISlideShowItem>;
     index: number;
+    className: string;
 }
 
 export type ISlideShow = React.Component<ISlideShowProps>;
