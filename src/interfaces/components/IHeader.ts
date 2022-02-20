@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {IComponent} from '@Interfaces/IComponent';
 
 export interface IHeaderItem {
     text: string;
@@ -13,7 +14,7 @@ export interface IHeaderItem {
     onClick: Function;
 }
 
-export interface IHeaderProps {
+export interface IHeaderProps extends IComponent {
     items: Array<IHeaderItem>;
 }
 

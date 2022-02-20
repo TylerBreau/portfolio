@@ -1,6 +1,7 @@
 import React from 'react';
+import {IComponent} from '@Interfaces/IComponent';
 
-export class ComponentLogic<IState = never, IProps = never> {
+export class ComponentLogic<IState = never, IProps extends IComponent = never> {
     $node: React.Component;
     $classNames: Array<string>;
 
@@ -30,7 +31,7 @@ export class ComponentLogic<IState = never, IProps = never> {
     _initState(state: Partial<IState>) {}
 
     getClassName(): string {
-        return this.$classNames.join(' ');
+        return this.$classNames.join(' ') + ' ' + this.getProps().className;
     }
 
     getNode(): React.Component {
