@@ -1,14 +1,26 @@
 {
     "compilerOptions": {
-        "outDir": "./www",
+        "noEmit": true,
+        "moduleResolution": "Node",
+        "allowJs": true,
+        "strict": true,
         "module": "CommonJS",
-        "noImplicitAny": true,
         "esModuleInterop": true,
-        "baseUrl": "./src/logic",
+        "isolatedModules": true,
+        "baseUrl": "./src/",
         "paths": {
-            "@Logic/*": ["./*"]
-        }
+            "@Views/*": ["./views/*"],
+            "@Styles/*": ["./styles/*"],
+            "@Res/*": ["./res/*"],
+            "@Logic/*": ["./logic/*"],
+            "@Interfaces/*": ["./interfaces/*"]
+        },
+        "jsx": "react-jsx"
     },
-    "include": ["./src/logic/**/*.ts", "./src/logic/*.ts"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+    "include": [
+        "./src/logic/**/*.ts",
+        "./src/logic/*.ts",
+        "./src/views/**/*.tsx",
+        "./src/views/*.tsx"
+    ]
 }

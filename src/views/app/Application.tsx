@@ -2,6 +2,7 @@
 import React from 'react';
 import '@Styles/app/Application';
 import {ApplicationLogic} from '@Logic/app/ApplicationLogic';
+import {ScreenURL} from '@Logic/utility/ScreenURL';
 import {
     BrowserRouter,
     Routes,
@@ -9,9 +10,12 @@ import {
 } from 'react-router-dom';
 
 import {HomeScreen} from '@Views/screens/HomeScreen';
+import {FluxArchitectureScreen} from '@Views/screens/FluxArchitectureScreen';
 
 export class Application extends React.Component {
-    constructor(props) {
+    private $logic: ApplicationLogic;
+
+    constructor(props: never) {
         super(props);
         this.$logic = new ApplicationLogic(this);
     }
@@ -20,7 +24,8 @@ export class Application extends React.Component {
         return <div className={this.$logic.getClassName()}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<HomeScreen />} />
+                    <Route path={ScreenURL.HOME} element={<HomeScreen />} />
+                    <Route path={ScreenURL.FLUX_ARCHITECTURE} element={<FluxArchitectureScreen />} />
                 </Routes>
             </BrowserRouter>
         </div>;

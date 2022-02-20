@@ -1,50 +1,45 @@
 const path = require('path');
-// const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-// plugins: [new TsconfigPathsPlugin({})]
 
 module.exports = {
-    entry: './src/views/index.jsx',
+    entry: './src/views/index.tsx',
     output: {
         path: path.resolve(__dirname, 'www'),
         filename: 'app.js'
     },
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.less'],
+        extensions: ['.js', '.ts', '.tsx', '.less'],
         alias: {
             '@Views': path.resolve(__dirname, './src/views'),
             '@Styles': path.resolve(__dirname, './src/styles'),
             '@Res': path.resolve(__dirname, './src/res'),
-            '@Logic': path.resolve(__dirname, './src/logic')
+            '@Logic': path.resolve(__dirname, './src/logic'),
+            '@Interfaces': path.resolve(__dirname, './src/interfaces')
         }
     },
     module: {
         rules: [
             {
-                test: /(views).*\.jsx$/,
+                test: [
+                    /(views).*\.tsx$/,
+                    /(logic).*\.ts$/
+                ],
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            ['@babel/preset-env', { targets: 'defaults' }]
+                            ['@babel/preset-typescript'],
+                            ['@babel/preset-env', {targets: 'defaults'}],
+                            ['@babel/preset-react', {runtime: 'automatic'}]
                         ]
                     }
                 }
             },
             {
-                test: /(logic).*\.ts$/,
-                use: [{
-                    loader: 'ts-loader',
-                    options: {
-                        configFile: 'tsconfig.json'
-                    }
-                }]
-            },
-            {
                 test: /(styles).*\.less$/, use: ['style-loader', 'css-loader', 'less-loader']
             },
             {
-                test: [/(res).*\.svg$/],
+                test: /(res).*\.svg$/,
                 type: 'asset/resource',
                 exclude: [
                     /(views).*\.jsx$/,

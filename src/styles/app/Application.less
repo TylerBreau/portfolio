@@ -6,5 +6,16 @@
     .Screen {
         width: inherit;
         height: inherit;
+        display: flex;
+        flex-direction: column;
+
+        .Header, .Footer {
+            flex: 0 0 auto;
+        }
+    
+        .body {
+            flex: 1 1 auto;
+            width: 100%;    
+        }
     }
 }

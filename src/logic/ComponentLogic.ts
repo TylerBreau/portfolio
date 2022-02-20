@@ -1,8 +1,9 @@
 import React from 'react';
+import {IComponentProps} from '@Interfaces/IComponentProps';
 
-export class ComponentLogic<IState = never, IProps = never> {
+export class ComponentLogic<IState = never, IProps extends IComponentProps = never> {
     $node: React.Component;
-    $classNames: Array<String>;
+    $classNames: Array<string>;
 
     constructor(node: React.Component) {
         this.$node = node;
@@ -18,18 +19,19 @@ export class ComponentLogic<IState = never, IProps = never> {
     /**
      * Permanently adds a class name to this component's class name list.
      *
-     * This is meant to be only meant to be used during construction. Dynamic runtime class names should be handled in the View classes.
+     * This is meant to be only meant to be used during construction. Dynamic runtime class names should be handled using state checks inside the View classes.
      *
      * @param name
      */
-    _addClassName(name: String) {
+    _addClassName(name: string) {
         this.$classNames.push(name);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _initState(state: Partial<IState>) {}
 
-    getClassName(): String {
-        return this.$classNames.join(' ');
+    getClassName(): string {
+        return this.$classNames.join(' ') + ' ' + this.getProps().className;
     }
 
     getNode(): React.Component {
