@@ -19,7 +19,7 @@ export class ComponentLogic<IState = never, IProps extends IComponent = never> {
     /**
      * Permanently adds a class name to this component's class name list.
      *
-     * This is meant to be only meant to be used during construction. Dynamic runtime class names should be handled in the View classes.
+     * This is meant to be only meant to be used during construction. Dynamic runtime class names should be handled using state checks inside the View classes.
      *
      * @param name
      */
