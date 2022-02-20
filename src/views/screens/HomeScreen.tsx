@@ -8,6 +8,7 @@ import {Header} from '@Views/components/Header';
 import {WorkExample} from '@Views/components/WorkExample';
 import {ScreenURL} from '@Logic/utility/ScreenURL';
 import {IHomeScreen, IHomeScreenState} from '@Interfaces/screens/IHomeScreen';
+import {AboutMe} from '@Views/components/AboutMe';
 
 export class HomeScreen extends React.Component<{}, IHomeScreenState> implements IHomeScreen {
     private $logic: HomeScreenLogic;
@@ -56,42 +57,7 @@ export class HomeScreen extends React.Component<{}, IHomeScreenState> implements
                 items={[
                     {
                         render: () => {
-                            return <div className='slideshow-content aboutMe' key='aboutMe'>
-                                <div className='col1 col'>
-                                    <div className='row'>
-                                        <span className='label'>Name:</span>
-                                        <span className='value'>Tyler Breau</span>
-                                    </div>
-                                    <div className='row'>
-                                        <span className='label'>Occupation:</span>
-                                        <span className='value'>Web and Mobile Developer</span>
-                                    </div>
-                                    <div className='row'>
-                                        <span className='label list-label'>Traits:</span>
-                                        <ul className='value'>
-                                            <li>Straight to the Point</li>
-                                            <li>Hardworker</li>
-                                            <li>Perfectionist</li>
-                                            <li>Considerate</li>
-                                            <li>Introverted</li>
-                                            <li>Open-Minded</li>
-                                        </ul>
-                                    </div>
-                                    <div className='row'>
-                                        <span className='label'>Motto:</span>
-                                        <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
-                                    </div>
-                                    <div className='row'>
-                                        <span className='label'>Education:</span>
-                                        <span className='value'>2018 Grad of NBCC Moncton, Web and Mobile Application Development Program</span>
-                                    </div>
-                                    <div className='row'>
-                                        <span className='label'>Notes:</span>
-                                        <span className='value'>First experienced programming through a highschool Java class. Paid own tuition through Summer Programming Jobs.</span>
-                                    </div>
-                                </div>
-                                <img className='col' height='200px' width='300px' />
-                            </div>;
+                            return <AboutMe className='slideshow-content aboutMe' />;
                         }
                     },
                     {

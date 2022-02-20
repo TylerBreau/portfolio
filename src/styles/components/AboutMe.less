@@ -1,0 +1,20 @@
+
+.AboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .col {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    .col1 {
+        flex: 1 1 auto;
+    }
+
+    img.col {
+        flex: 0 0 auto;
+    }
+}
