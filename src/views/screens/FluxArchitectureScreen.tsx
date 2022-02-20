@@ -2,8 +2,10 @@
 import React from 'react';
 import '@Styles/screens/FluxArchitecture';
 import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
+import {Footer} from '@Views/components/Footer';
+import {Header} from '@Views/components/Header';
 
-export class FluxArchitectureScreen extends React.Component {
+export class FluxArchitectureScreen extends React.Component<{}, {}> {
     private $logic: FluxArchitectureScreenLogic;
 
     constructor(props: never) {
@@ -13,6 +15,10 @@ export class FluxArchitectureScreen extends React.Component {
 
     render() {
         return <div className={this.$logic.getClassName()}>
+            <Header items={[]} />
+            <div className='body'>
+            </div>
+            <Footer />
         </div>;
     }
 }
