@@ -17,7 +17,15 @@ export class SlideShow extends React.Component<ISlideShowProps> implements ISlid
 
     render() {
         return <div className={this.$logic.getClassName()}>
-            {this.$logic.getActiveSlide().render()}
+            {this.props.items.map((item, i) => {
+                return <div
+                    key={i}
+                    className='slideshow-item'
+                    style={{left: this.$logic.getLeft()}}
+                >
+                    {item.render()}
+                </div>;
+            })}
         </div>;
     }
 }
