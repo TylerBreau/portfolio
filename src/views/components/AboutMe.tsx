@@ -18,10 +18,17 @@ export class AboutMe extends React.Component<IAboutMeProps, {}> implements IAbou
     render() {
         return <div className={this.$logic.getClassName()}>
             <div className='col1 col'>
-                <span className='name'>Tyler Breau</span>
-                <span className='occupation'>Web and Mobile Developer</span>
+                <p>
+                    <span className='name'>Tyler Breau</span>
+                    <br />
+                    <span className='occupation'>Web and Mobile Developer</span>
+                    <br />
+                    <span className='motto'>- &ldquo;If you are going to do something you mind as well do it right the first time.&rdquo;</span>
+                </p>
+                <br/>
+                <br/>
+                <br/>
                 <span className='education'>2018 Grad of NBCC Moncton, Web and Mobile Application Development Program</span>
-                <span className='motto'>If you are going to do something you mind as well do it right the first time.</span>
                 <ul className='value'>
                     <li>Straight to the Point</li>
                     <li>Hardworker</li>
