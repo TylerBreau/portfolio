@@ -1,7 +1,7 @@
 import React from 'react';
 import {IComponentProps} from '@Interfaces/IComponentProps';
 
-export class ComponentLogic<IState = never, IProps extends IComponentProps = never> {
+export class ComponentLogic<IProps extends IComponentProps = never, IState = never> {
     $node: React.Component;
     $classNames: Array<string>;
 

@@ -6,7 +6,7 @@ import {
     IHeaderItem
 } from '@Interfaces/components/IHeader';
 
-export class HeaderLogic extends ComponentLogic<never, IHeaderProps> {
+export class HeaderLogic extends ComponentLogic<IHeaderProps, never> {
     constructor(node: React.Component) {
         super(node);
         this._addClassName('Header');
