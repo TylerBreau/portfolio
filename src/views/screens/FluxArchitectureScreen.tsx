@@ -8,7 +8,7 @@ import {Header} from '@Views/components/Header';
 export class FluxArchitectureScreen extends React.Component<{}, {}> {
     private $logic: FluxArchitectureScreenLogic;
 
-    constructor(props: never) {
+    constructor(props: {}) {
         super(props);
         this.$logic = new FluxArchitectureScreenLogic(this);
     }
