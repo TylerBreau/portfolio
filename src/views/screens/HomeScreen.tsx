@@ -12,7 +12,7 @@ import {IHomeScreen, IHomeScreenState} from '@Interfaces/screens/IHomeScreen';
 export class HomeScreen extends React.Component<{}, IHomeScreenState> implements IHomeScreen {
     private $logic: HomeScreenLogic;
 
-    constructor(props: never) {
+    constructor(props: {}) {
         super(props);
         this.$logic = new HomeScreenLogic(this);
     }

@@ -1,26 +1,25 @@
 {
     "compilerOptions": {
         "noEmit": true,
-        "moduleResolution": "Node",
+        "moduleResolution": "bundler",
         "allowJs": true,
         "strict": true,
-        "module": "CommonJS",
+        "module": "ES2020",
         "esModuleInterop": true,
         "isolatedModules": true,
-        "baseUrl": "./src/",
         "paths": {
-            "@Views/*": ["./views/*"],
-            "@Styles/*": ["./styles/*"],
-            "@Res/*": ["./res/*"],
-            "@Logic/*": ["./logic/*"],
-            "@Interfaces/*": ["./interfaces/*"]
+            "@Views/*": ["./src/views/*"],
+            "@Styles/*": ["./src/styles/*"],
+            "@Res/*": ["./src/res/*"],
+            "@Logic/*": ["./src/logic/*"],
+            "@Interfaces/*": ["./src/interfaces/*"]
         },
         "jsx": "react-jsx"
     },
     "include": [
-        "./src/logic/**/*.ts",
-        "./src/logic/*.ts",
-        "./src/views/**/*.tsx",
-        "./src/views/*.tsx"
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }
