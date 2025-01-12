@@ -32,8 +32,12 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                     <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
                 </div>
                 <div className='row'>
-                    <span className='label'>Education:</span>
-                    <span className='value'>2018 Grad of NBCC Moncton, Web and Mobile Application Development Program</span>
+                    <span className='label'>Education & Experience:</span>
+                    <span className='value'>
+                        2018 Grad of NBCC Moncton, Web and Mobile Application Development Program
+                        <br />
+                        Full-time Full-Stack Developer since 2018
+                    </span>
                 </div>
                 <div className='row'>
                     <span className='label'>Backstory:</span>
