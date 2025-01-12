@@ -63,7 +63,7 @@ export class HomeScreen extends React.Component<{}, IHomeScreenState> implements
                     },
                     {
                         render: () => {
-                            return <WorkExperience key="WorkExperience" className="slideshow-content" />;
+                            return <WorkExperience key='WorkExperience' className='slideshow-content' />;
                         }
                     },
                     {
@@ -79,7 +79,7 @@ export class HomeScreen extends React.Component<{}, IHomeScreenState> implements
                                         <li>How to implement it?</li>
                                         <li>How should it be used?</li>
                                     </ul>
-                                    <img src="FluxArchitectureImage.png" />
+                                    <img src='FluxArchitectureImage.png' />
                                 </WorkExample>
                             </div>;
                         }
