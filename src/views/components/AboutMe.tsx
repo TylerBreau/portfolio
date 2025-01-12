@@ -6,10 +6,11 @@ import { IAboutMeProps } from '@Interfaces/components/IAboutMe';
 export class AboutMe extends React.Component<IAboutMeProps> {
     render() {
         return <div className={'AboutMe' + (this.props.className ? ' ' + this.props.className : '')}>
-            <div className='col1 col'>
-                <div className='row'>
+            <div className='content'>
+                <div className='row name-row'>
                     <span className='label'>Name:</span>
                     <span className='value'>Tyler Breau</span>
+                    <img height='200px' width='300px' />
                 </div>
                 <div className='row'>
                     <span className='label'>Occupation:</span>
@@ -61,7 +62,6 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                     </p>
                 </div>
             </div>
-            <img className='col' height='200px' width='300px' />
         </div>;
     }
 }

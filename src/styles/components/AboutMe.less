@@ -1,17 +1,8 @@
 
 .AboutMe {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     overflow: auto;
 
-    .col {
-        &:not(:last-child) {
-            margin-right: 25px;
-        }
-    }
-
-    .col1 {
+    .content {
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
@@ -28,10 +19,17 @@
             p {
                 margin-top: 0;
             }
+
+            &.name-row {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 0; 
+                }
+            }
         }
     }
 
-    img.col {
-        flex: 0 0 auto;
-    } 
 }
