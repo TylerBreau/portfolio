@@ -17,7 +17,8 @@
         "jsx": "react-jsx"
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "./txt.d.ts"
     ],
     "exclude": [
         "node_modules"

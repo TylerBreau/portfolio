@@ -46,6 +46,10 @@ module.exports = {
                     /(logic).*\.ts$/,
                     /(styles).*\.less$/
                 ]
+            },
+            {
+                test: /(res).*\.txt$/,
+                type: 'asset/source',
             }
         ]
     }

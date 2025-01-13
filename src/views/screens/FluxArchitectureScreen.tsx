@@ -4,6 +4,7 @@ import '@Styles/screens/FluxArchitecture';
 import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
+import FluxArchitectureCode from '../../res/FluxArchitectureCode.txt';
 
 export class FluxArchitectureScreen extends React.Component<{}, {}> {
     private $logic: FluxArchitectureScreenLogic;
@@ -38,61 +39,9 @@ export class FluxArchitectureScreen extends React.Component<{}, {}> {
                     <li>The EventsStore emits an onUpdate event.</li>
                     <li>The page's onUpdate listeners receives the event. The page rerenders with the events array.</li>
                 </ol>
+                <pre><code>{FluxArchitectureCode}</code></pre>
             </div>
             <Footer />
         </div>;
-    }
-}
-
-
-
-
-import { v4 as uuidv4 } from 'uuid';
-
-interface IDispatcher {
-    dispatch(data: IActionData): void;
-    register(id: string, callback: (data: IActionData) => void);
-    
-}
-
-class Dispatcher {
-    private $callbacks: Record<string, (data: IActionData) => void>;
-
-    private static $instance: Dispatcher;
-
-    private constructor() {
-        this.$callbacks = {};
-    }
-
-    public static getInstance(): Dispatcher {
-        if (!Dispatcher.$instance) {
-            Dispatcher.$instance = new Dispatcher();
-        }
-
-        return Dispatcher.$instance;
-    }
-
-    public dispatch(data: IActionData): void {
-        for (let i in this.$callbacks) {
-            this.$callbacks[i](data);
-        }
-    }
-
-    /**
-     * 
-     * @param id Must not already be registered.
-     * @param callback 
-     * @returns 
-     */
-    public register(id: string, callback: (data: IActionData) => void): string {
-        if (this.$callbacks[id]) {
-            throw new Error('Duplicater register for id: ' + id)
-        }
-        this.$callbacks[id] = callback;
-        return id;
-    }
-
-    public unregister(id: string): void {
-        delete this.$callbacks[id];
     }
 }
