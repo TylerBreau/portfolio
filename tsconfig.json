@@ -12,12 +12,15 @@
             "@Styles/*": ["./src/styles/*"],
             "@Res/*": ["./src/res/*"],
             "@Logic/*": ["./src/logic/*"],
-            "@Interfaces/*": ["./src/interfaces/*"]
+            "@Interfaces/*": ["./src/interfaces/*"],
+            "@WorkExamples/*": ["./src/res/workExamples/*"],
         },
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "types": ["node"]
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "txt.d.ts"
     ],
     "exclude": [
         "node_modules"
