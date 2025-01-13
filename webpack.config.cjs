@@ -14,7 +14,8 @@ module.exports = {
             '@Styles': path.resolve(__dirname, './src/styles'),
             '@Res': path.resolve(__dirname, './src/res'),
             '@Logic': path.resolve(__dirname, './src/logic'),
-            '@Interfaces': path.resolve(__dirname, './src/interfaces')
+            '@Interfaces': path.resolve(__dirname, './src/interfaces'),
+            '@WorkExamples': path.resolve(__dirname, './src/res/workExamples')
         }
     },
     module: {
@@ -23,7 +24,8 @@ module.exports = {
                 test: [
                     /(views).*\.tsx$/,
                     /(logic).*\.ts$/,
-                    /(interfaces).*\.ts$/
+                    /(interfaces).*\.ts$/,
+                    /(workExamples).*\.(ts|tsx)$/
                 ],
                 use: {
                     loader: 'babel-loader',
@@ -47,6 +49,10 @@ module.exports = {
                     /(logic).*\.ts$/,
                     /(styles).*\.less$/
                 ]
+            },
+            {
+                test: /(res).*\.txt$/,
+                type: 'asset/source',
             }
         ]
     }

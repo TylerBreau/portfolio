@@ -9,7 +9,7 @@
     "webpack": "webpack -c ./webpack.config.cjs",
     "tsc": "tsc",
     "copy-statics": "mkdir -p www && cp ./src/index.html ./www/index.html && cp ./src/res/favicon.ico ./www/favicon.ico && cp ./src/res/FluxArchitectureImage.png ./www/FluxArchitectureImage.png && cp ./src/res/ProfileImage.jpg ./www/ProfileImage.jpg",
-    "build": "npm run lint && npm run tsc && npm run copy-statics && npm run webpack"
+    "build": "npm run lint && ./scripts/copyWorkExamplesStatics.sh && npm run tsc && npm run copy-statics && npm run webpack"
   },
   "eslintConfig": {
     "extends": [
@@ -23,6 +23,7 @@
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@eslint/js": "9.18.0",
+    "@types/node": "25.9.1",
     "@types/prop-types": "15.7.15",
     "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",

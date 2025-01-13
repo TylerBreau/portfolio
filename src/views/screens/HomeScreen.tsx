@@ -57,7 +57,7 @@ export function HomeScreen() {
         {
             render: () => {
                 switch (workExampleIndex) {
-                    case WorkExampleIndex.FLUX_ARCHITECURE: return <FluxArchitectureWorkExample />;
+                    case WorkExampleIndex.FLUX_ARCHITECURE: return <FluxArchitectureWorkExample className='slideshow-content' />;
                     default: return null;
                 }
             }

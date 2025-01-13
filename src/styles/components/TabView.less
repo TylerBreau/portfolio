@@ -1,0 +1,21 @@
+
+@import '@Styles/color-scheme';
+
+.TabView {
+    .TabViewHeader {        
+        .headerItem {
+            margin: 0px 1px;
+            padding: 3px;
+            padding-bottom: 0;
+            border: 1px solid @border-color;
+            border-bottom: 0px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+
+            &.active {
+                border-color: @primary-color;
+            }
+        }
+    }
+}
