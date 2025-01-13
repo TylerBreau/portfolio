@@ -1,5 +1,5 @@
 
 export enum ScreenURL {
-    HOME = '/',
+    HOME = '/home',
     FLUX_ARCHITECTURE = '/fluxarchitecture'
 }
