@@ -12,13 +12,14 @@
             "@Styles/*": ["./src/styles/*"],
             "@Res/*": ["./src/res/*"],
             "@Logic/*": ["./src/logic/*"],
-            "@Interfaces/*": ["./src/interfaces/*"]
+            "@Interfaces/*": ["./src/interfaces/*"],
+            "@WorkExamples/*": ["./src/workExamples/*"],
         },
         "jsx": "react-jsx"
     },
     "include": [
         "src/**/*",
-        "./txt.d.ts"
+        "WorkExamples.d.ts"
     ],
     "exclude": [
         "node_modules"

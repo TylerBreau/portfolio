@@ -14,11 +14,19 @@ module.exports = {
             '@Styles': path.resolve(__dirname, './src/styles'),
             '@Res': path.resolve(__dirname, './src/res'),
             '@Logic': path.resolve(__dirname, './src/logic'),
-            '@Interfaces': path.resolve(__dirname, './src/interfaces')
+            '@Interfaces': path.resolve(__dirname, './src/interfaces'),
+            '@WorkExamples': path.resolve(__dirname, './src/workExamples')
         }
     },
     module: {
         rules: [
+            {
+                test: [
+                    /(src\/workExamples).*\.ts$/,
+                    /(src\/workExamples).*\.tsx$/
+                ],
+                type: 'asset/source',
+            },
             {
                 test: [
                     /(views).*\.tsx$/,
@@ -46,10 +54,6 @@ module.exports = {
                     /(logic).*\.ts$/,
                     /(styles).*\.less$/
                 ]
-            },
-            {
-                test: /(res).*\.txt$/,
-                type: 'asset/source',
             }
         ]
     }

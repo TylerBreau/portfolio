@@ -4,7 +4,7 @@ import '@Styles/screens/FluxArchitecture';
 import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
-import FluxArchitectureCode from '../../res/FluxArchitectureCode.txt';
+import ActionCode from '@WorkExamples/fluxArchitecture/Action';
 
 export class FluxArchitectureScreen extends React.Component<{}, {}> {
     private $logic: FluxArchitectureScreenLogic;
@@ -39,7 +39,7 @@ export class FluxArchitectureScreen extends React.Component<{}, {}> {
                     <li>The EventsStore emits an onUpdate event.</li>
                     <li>The page's onUpdate listeners receives the event. The page rerenders with the events array.</li>
                 </ol>
-                <pre><code>{FluxArchitectureCode}</code></pre>
+                <pre><code>{ActionCode}</code></pre>
             </div>
             <Footer />
         </div>;
