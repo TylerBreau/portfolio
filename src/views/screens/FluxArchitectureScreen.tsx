@@ -4,7 +4,7 @@ import '@Styles/screens/FluxArchitecture';
 import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
-import ActionCode from '@WorkExamples/fluxArchitecture/Action';
+import ActionCode from '@WorkExamples/fluxArchitecture/Action.txt';
 
 export class FluxArchitectureScreen extends React.Component<{}, {}> {
     private $logic: FluxArchitectureScreenLogic;

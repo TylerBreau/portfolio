@@ -13,13 +13,13 @@
             "@Res/*": ["./src/res/*"],
             "@Logic/*": ["./src/logic/*"],
             "@Interfaces/*": ["./src/interfaces/*"],
-            "@WorkExamples/*": ["./src/workExamples/*"],
+            "@WorkExamples/*": ["./src/res/workExamples/*"],
         },
         "jsx": "react-jsx"
     },
     "include": [
         "src/**/*",
-        "WorkExamples.d.ts"
+        "txt.d.ts"
     ],
     "exclude": [
         "node_modules"
