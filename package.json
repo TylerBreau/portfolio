@@ -8,7 +8,7 @@
     "lint": "eslint",
     "webpack": "webpack -c ./webpack.config.cjs",
     "tsc": "tsc",
-    "copy-statics": "mkdir -p www && cp ./src/index.html ./www/index.html && cp ./src/res/favicon.ico ./www/favicon.ico && cp ./src/res/FluxArchitectureImage.png ./www/FluxArchitectureImage.png",
+    "copy-statics": "mkdir -p www && cp ./src/index.html ./www/index.html && cp ./src/res/favicon.ico ./www/favicon.ico && cp ./src/res/FluxArchitectureImage.png ./www/FluxArchitectureImage.png && cp ./src/res/ProfileImage.jpg ./www/ProfileImage.jpg",
     "build": "npm run lint && npm run tsc && npm run copy-statics && npm run webpack"
   },
   "eslintConfig": {
