@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import '@Styles/components/WorkExperience';
+import '@Styles/components/WorkExperience.less';
 import { IComponentProps } from '@Interfaces/IComponentProps';
 
 export class WorkExperience extends React.Component<IComponentProps> {

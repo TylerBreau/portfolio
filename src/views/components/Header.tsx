@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/components/Header';
+import '@Styles/components/Header.less';
 import {
     IHeader,
     IHeaderProps,

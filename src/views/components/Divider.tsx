@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/components/Divider';
+import '@Styles/components/Divider.less';
 
 export class Divider extends React.Component {
     render() {

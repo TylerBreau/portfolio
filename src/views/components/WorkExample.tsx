@@ -4,7 +4,7 @@ import {
     Link
 } from 'react-router-dom';
 
-import '@Styles/components/WorkExample';
+import '@Styles/components/WorkExample.less';
 import {WorkExampleLogic} from '@Logic/components/WorkExampleLogic';
 import {
     IWorkExample,

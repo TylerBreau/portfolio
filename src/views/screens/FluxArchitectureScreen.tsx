@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/screens/FluxArchitecture';
+import '@Styles/screens/FluxArchitecture.less';
 import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
