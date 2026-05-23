@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/components/SlideShow';
+import '@Styles/components/SlideShow.less';
 import {SlideShowLogic} from '@Logic/components/SlideShowLogic';
 import {
     ISlideShow,

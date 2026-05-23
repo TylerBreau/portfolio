@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/screens/HomeScreen';
+import '@Styles/screens/HomeScreen.less';
 import {HomeScreenLogic} from '@Logic/screens/HomeScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Footer} from '@Views/components/Footer';

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/app/Application';
+import '@Styles/app/Application.less';
 import {ApplicationLogic} from '@Logic/app/ApplicationLogic';
 import {ScreenURL} from '@Logic/utility/ScreenURL';
 import {

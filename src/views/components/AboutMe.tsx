@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '@Styles/components/AboutMe';
+import '@Styles/components/AboutMe.less';
 import { IAboutMeProps } from '@Interfaces/components/IAboutMe';
 
 export class AboutMe extends React.Component<IAboutMeProps> {
