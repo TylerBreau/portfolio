@@ -50,7 +50,7 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                         <br />
                         The manager helped get started with PHP and a simple development environment but I was expected to handle the majority of self-learning while still meeting the deadlines for the project. 
                         <br /><br />
-                        It was a great opportunity to continue exploring programming while using the pay to fund my college tuition and other expenses. As expected, without proper education, the website was functional and looked fine but was not coded that well. I believe it was sufficiently within expectations but now that I've graduated from NBCC and gained some years of work experience, I can confidently say I would have done just about everything differently. The website would look very similar, just would have built better.
+                        It was a great opportunity to continue exploring programming while using the pay to fund my college tuition and other expenses. As expected, without proper education, the website was functional and looked fine but was not coded that well. I believe it was sufficiently within expectations but now that I've graduated from NBCC and gained some years of work experience, I can confidently say I would have done just about everything differently. The website would look very similar, just would have been built better.
                         <br /><br />
                         My time at NBCC was colorful... It was refreshing, frustrating, and informative. While there were times I didn't like, it was a good experience and help me grow as a person.
                         <br />
