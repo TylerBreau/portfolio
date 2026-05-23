@@ -10,7 +10,7 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                 <div className='row name-row'>
                     <span className='label'>Name:</span>
                     <span className='value'>Tyler Breau</span>
-                    <img height='200px' width='300px' />
+                    <img height='300px' width='300px' src='ProfileImage.jpg' />
                 </div>
                 <div className='row'>
                     <span className='label'>Occupation:</span>
