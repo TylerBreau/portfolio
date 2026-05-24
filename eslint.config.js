@@ -5,52 +5,52 @@ import js from "@eslint/js";
 import tseslint from 'typescript-eslint';
 
 export default [
-
     {
-        ...js.configs.recommended,
-        files: [ "./src/**/*.{ts,tsx}" ]
+        ignores: [
+            ".config/**",
+            "webpack.config.cjs",
+            "www",
+            "node_modules"
+        ]
     },
-    ...(tseslint.configs.recommended.map((config) => {
-        return {
-            ...config,
-            files: [ "./src/**/*.{ts,tsx}" ]
-        };
-    })),
-    {
+    js.configs.recommended,
+    ...tseslint.configs.recommended,
+        {
         ...react.configs.flat.recommended,
-        files: [ "./src/**/*.{ts,tsx}" ]
+        settings: {
+            react: {
+                version: "detect"
+            }
+        }
     },
     {
         ...react.configs.flat["jsx-runtime"],
-        files: [ "./src/**/*.{ts,tsx}" ]
+        settings: {
+            react: {
+                version: "detect"
+            }
+        }
     },
-
     {
         files: [ "./src/**/*.{ts,tsx}" ],
         languageOptions: {
-            ecmaVersion: 2021,
+            ecmaVersion: "latest",
             sourceType: "module",
-            ecmaFeatures: {
-                jsx: true
-            },
             globals: {
                 ...globals.browser,
                 ...globals.es2021
             }
         },
-        parser: "@typescript-eslint/parser",
         plugins: {
             react: react,
             typescript: typescript
         },
         rules: {
             "semi": [2, "always"],
-            "indent": ["error", 4]
+            "indent": ["error", 4],
+            "@typescript-eslint/no-empty-object-type": "off"
         },
         settings: {
-            react: {
-                version: "detect"
-            },
             "import/resolver": {
                 webpack: {}
             }
