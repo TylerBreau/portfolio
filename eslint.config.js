@@ -48,7 +48,8 @@ export default [
         rules: {
             "semi": [2, "always"],
             "indent": ["error", 4],
-            "@typescript-eslint/no-empty-object-type": "off"
+            "@typescript-eslint/no-empty-object-type": "off",
+            "prefer-const": "off"
         },
         settings: {
             "import/resolver": {
