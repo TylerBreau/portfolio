@@ -22,7 +22,8 @@ module.exports = {
             {
                 test: [
                     /(views).*\.tsx$/,
-                    /(logic).*\.ts$/
+                    /(logic).*\.ts$/,
+                    /(interfaces).*\.ts$/
                 ],
                 use: {
                     loader: 'babel-loader',
