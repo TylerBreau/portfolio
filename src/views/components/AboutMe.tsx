@@ -42,7 +42,7 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                 <div className='row'>
                     <span className='label'>Backstory:</span>
                     <p className='value'>
-                        My first experience programming was through a high school Java class. During that school year, I remade the periodic table of elements in a Java program; it was an interesting project though it wasn't pretty.
+                        My first experience programming was through a high school Java class. During that school year, I remade the periodic table of elements in a Java program; it was an interesting project though it wasn&apos;t pretty.
                         <br /><br />
                         After high school, I planned to start a career in programming. I had first thought about going into game development but decided against it as I learned there were few local job opportunities; instead I went into web and mobile development and enrolled into NBCC Moncton.
                         <br />
@@ -52,9 +52,9 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                         <br /><br />
                         It was a great opportunity to continue exploring programming while using the pay to fund my college tuition and other expenses. As expected, without proper education, the website was functional and looked fine but was not coded that well. I feel confident that I performed within expectations but after I had graduated from NBCC and gained some years of work experience, I could confidently say I would have done just about everything differently. The website would look very similar, just would have been built better.
                         <br /><br />
-                        My time at NBCC was colorful... It was refreshing, frustrating, and informative. While there were times I didn't like, it was a good experience and help me grow.
+                        My time at NBCC was colorful... It was refreshing, frustrating, and informative. While there were times I didn&apos;t like, it was a good experience and help me grow.
                         <br />
-                        NBCC's web and mobile course covered a wide range of topics, including a variety of languages: C#, Java, Objective C, HTML, CSS, JavaScript, and MySQL. We also explored several frameworks and environments: ASP.NET, Java Spring, JSP, iOS, and Android.
+                        NBCC&apos;s web and mobile course covered a wide range of topics, including a variety of languages: C#, Java, Objective C, HTML, CSS, JavaScript, and MySQL. We also explored several frameworks and environments: ASP.NET, Java Spring, JSP, iOS, and Android.
                         <br />
                         Additionally, the course touched on software architecture and class projects to explore more frameworks.
                         <br />
@@ -63,7 +63,7 @@ export class AboutMe extends React.Component<IAboutMeProps> {
                         The class projects was focused on web frameworks and libraries, a fitting topic for a web and mobile course. I ended up choosing React, a framework whose focus is making the creation of UI more seamless. Creating complex UI can be a lot of work. You have to manage the state, UI interactions, and control how the UI reacts and updates to state changes. Having worked with React for years after college, I find it is a great library to simplify the entire process.
                         <br /><br />
                         With the help of my brother who was a developer, I did my OJT at TotalPave and continued working at TotalPave after graduating. During the eight years I worked at TotalPave, I helped it break out of the startup phase, assisting in developing major features. My biggest project at TotalPave was setting up full offline support for their data collection apps, a feature I started on early in my career and made several iterations on over the years. This feature was particularly important to TotalPave as the data their apps collected was visual and physical surveys of roads. Depending on where the roads were internet connection was not always reliable, so it was vital for the apps to be fully functional without internet.
-                        My brother was the lead developer and my mentor, with his help I've grown significantly as a developer. During my time at TotalPave I've progressed my experience from Junior to Senior developer, honing my ability to solve problems, utilizing design patterns, designing software, and developing a strong intuition for tackling coding tasks and fixing bugs.
+                        My brother was the lead developer and my mentor, with his help I&apos;ve grown significantly as a developer. During my time at TotalPave I&apos;ve progressed my experience from Junior to Senior developer, honing my ability to solve problems, utilizing design patterns, designing software, and developing a strong intuition for tackling coding tasks and fixing bugs.
                     </p>
                 </div>
             </div>

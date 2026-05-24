@@ -5,7 +5,7 @@ import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreen
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
 
-export class FluxArchitectureScreen extends React.Component<{}, {}> {
+export class FluxArchitectureScreen extends React.Component {
     private $logic: FluxArchitectureScreenLogic;
 
     constructor(props: {}) {

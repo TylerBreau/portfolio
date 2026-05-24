@@ -11,7 +11,7 @@ export interface IHeaderItem {
     /**
      * @param index The index of the items array item that was clicked.
     */
-    onClick: Function;
+    onClick: () => void;
 }
 
 export interface IHeaderProps extends IComponentProps {
