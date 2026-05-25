@@ -36,22 +36,30 @@ export function WorkExperience(props: IWorkExperienceProps) {
         </div>
         <span className='row header'>Employment History</span>
         <div className='row'>
-            <span className='label'>TotalPave, Web and Mobile Full-Stack Developer</span><br />
-            <span>May 22, 2018-Present</span><br />
+            <span className='label'>Full Stack Software Developer</span><br />
+            <span>May 2018 - May 2026</span><br />
+            <span>TotalPave</span><br />
             <span>Fredericton, NB</span><br />
             <div>
                 <ul>
-                    <li><b>Worked</b> with React, Cordova, TypeScript (frontend and backend), Less, MySQL, SQLite, Android, and Objective-C to build and maintain the company&apos;s websites, mobile apps, and backend systems.</li>
-                    <li><b>Used</b> the Smart Phone features, Accelerometer, Geolocation, Camera, SQLite, and GoogleMaps APIs for iOS 9+ and Android 4.1+.</li>
-                    <li><b>Generated</b> and <b>provided</b> charts and graphs using D3 (Data Driven Documents) library.</li>
-                    <li><b>Designed</b> mobile apps and websites using Flux Architecture and OOP design patterns.</li>
-                    <li><b>Wrote</b> C++ libraries to abstract re-usable codebases between Android and iOS.</li>
+                    <li><b>Worked</b> with React, Typescript, Cordova, Less, SQLite, Jest, and MySQL to build and maintain a suite of iOS and Android apps, Customer Web Portal, and Server-Side codebase.</li>
+                    <li><b>Utilized</b> mobile Camera, Accelerometer, Location, and Google maps for the mobile applications.</li>
+                    <li><b>Collaborated</b> with peers to design, review, and maintain GIS software within the OOP paradigm.</li>
+                    <li><b>Contributed</b>     significantly to TotalPave’s transition from startup to established commercial product, including but not limited to:</li>
+                    <li>
+                        <ul>
+                            <li><b>Introducing</b> offline support so that applications can be used effectively without a data connection with deferred data syncing capabilities.</li>
+                            <li><b>Implementing</b> tools for road asset condition management according to the PDRM 2013 specification and MTO provisions, SP-021, SP-023, SP-024, SP-025, and SP-026.</li>
+                            <li><b>Collaborated</b> with coworkers in the design and implementation of data to image software and a quad tree system used to power a tile map.</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
         <div className='row'>
-            <span className='label'>Neil Squire Society, Web and Mobile Developer</span><br />
-            <span>Summer 2016-2017</span><br />
+            <span className='label'>Web Developer</span><br />
+            <span>Summer 2016 & 2017</span><br />
+            <span>Neil Squire Society</span><br />
             <span>Moncton, NB</span><br />
             <div>
                 <ul>
@@ -59,6 +67,20 @@ export function WorkExperience(props: IWorkExperienceProps) {
                     <li><b>Supported</b> Assistive Technology and browsers as old as IE 9 throughout the website.</li>
                     <li><b>Implemented</b> automated emails with PHP Mailer.</li>
                     <li><b>Generated</b> and <b>provided</b> downloadable PDFs with the TCPDF Library.</li>
+                </ul>
+            </div>
+        </div>
+        <span className='row header'>Education</span>
+        <div className='row'>
+            <span className='label'>Web and Mobile Application Development Diploma</span><br />
+            <span>September 2016 - June 2018</span><br />
+            <span>NBCC Moncton</span><br />
+            <span>Moncton, NB</span><br />
+            <div>
+                <ul>
+                    <li><b>Studied</b> the art of properly <b>planning</b>, <b>creating</b>, and <b>delivering</b> Information Technology Projects.</li>
+                    <li><b>Worked</b> with HTML, CSS, JavaScript, ASP.Net, Transact-SQL, React JS, Java EE, JSF, JSP, PHP, MySQL, Android and Swift.</li>
+                    <li><b>Used</b> N-Tier Methodology, MVC Architecture, Factory Pattern, and Test-Driven Development.</li>
                 </ul>
             </div>
         </div>
