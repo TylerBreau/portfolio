@@ -1,7 +1,10 @@
 
-import '@Styles/components/WorkExampleTile.less';
-import {IWorkExampleTileProps} from '@Interfaces/components/IWorkExampleTile';
 import {Link} from 'react-router-dom';
+
+import '@Styles/components/WorkExampleTile.less';
+
+import {IWorkExampleTileProps} from '@Interfaces/components/IWorkExampleTile';
+
 
 export function WorkExampleTile(props: IWorkExampleTileProps) {
     return <Link to={props.url}>

@@ -1,10 +1,12 @@
 
 import React from 'react';
 import '@Styles/components/Header.less';
+
 import {
     IHeaderProps,
     IHeaderItem
 } from '@Interfaces/components/IHeader';
+
 import {Divider} from '@Views/components/Divider';
 
 export function Header(props: IHeaderProps) {

@@ -1,7 +1,9 @@
 
 
 import '@Styles/components/WorkExperience.less';
+
 import {IWorkExperienceProps} from '@Interfaces/components/IWorkExperience';
+
 import {ComponentLogic} from '@Logic/ComponentLogic';
 
 export function WorkExperience(props: IWorkExperienceProps) {

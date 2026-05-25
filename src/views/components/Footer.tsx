@@ -1,5 +1,6 @@
 
 import '@Styles/components/Footer.less';
+
 import {Divider} from '@Views/components/Divider';
 
 const EMAIL = 'tylerbreau@hotmail.com';

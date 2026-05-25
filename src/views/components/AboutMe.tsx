@@ -1,6 +1,8 @@
 
 import '@Styles/components/AboutMe.less';
+
 import {IAboutMeProps} from '@Interfaces/components/IAboutMe';
+
 import {ComponentLogic} from '@Logic/ComponentLogic';
 
 export function AboutMe(props: IAboutMeProps) {

@@ -1,7 +1,9 @@
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+
 import '@Styles/index.less';
+
 import {Application} from '@Views/app/Application';
 
 const container = document.getElementById('root');

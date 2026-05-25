@@ -1,5 +1,6 @@
 
 import '@Styles/components/SlideShow.less';
+
 import {ISlideShowProps} from '@Interfaces/components/ISlideShow';
 
 export function SlideShow(props: ISlideShowProps) {

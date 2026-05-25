@@ -1,11 +1,14 @@
 
-import '@Styles/app/Application.less';
-import {ScreenURL} from '@Interfaces/ScreenURL';
 import {
     HashRouter,
     Routes,
     Route
 } from 'react-router-dom';
+
+import '@Styles/app/Application.less';
+
+import {ScreenURL} from '@Interfaces/ScreenURL';
+
 import {HomeScreen} from '@Views/screens/HomeScreen';
 import {FluxArchitectureScreen} from '@Views/screens/FluxArchitectureScreen';
 

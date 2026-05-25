@@ -1,14 +1,18 @@
 
 import {useState} from 'react';
+
 import '@Styles/screens/HomeScreen.less';
+
 import {ScreenLogic} from '@Logic/ScreenLogic';
+
 import {SlideShow} from '@Views/components/SlideShow';
 import {Footer} from '@Views/components/Footer';
 import {WorkExampleTile} from '@Views/components/WorkExampleTile';
 import {AboutMe} from '@Views/components/AboutMe';
 import {WorkExperience} from '@Views/components/WorkExperience';
-import {ScreenURL} from '@Interfaces/ScreenURL';
 import {PortfolioHeader} from '@Views/components/PortfolioHeader';
+
+import {ScreenURL} from '@Interfaces/ScreenURL';
 import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
 
 export function HomeScreen() {
