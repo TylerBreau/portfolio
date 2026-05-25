@@ -1,24 +1,14 @@
 
-import React from 'react';
 import '@Styles/screens/FluxArchitecture.less';
-import {FluxArchitectureScreenLogic} from '@Logic/screens/FluxArchitectureScreenLogic';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
+import {ScreenLogic} from '@Logic/ScreenLogic';
 
-export class FluxArchitectureScreen extends React.Component {
-    private $logic: FluxArchitectureScreenLogic;
-
-    constructor(props: {}) {
-        super(props);
-        this.$logic = new FluxArchitectureScreenLogic(this);
-    }
-
-    render() {
-        return <div className={this.$logic.getClassName()}>
-            <Header items={[]} />
-            <div className='body'>
-            </div>
-            <Footer />
-        </div>;
-    }
+export function FluxArchitectureScreen() {
+    return <div className={ScreenLogic.getClassName(['FluxArchitecture'])}>
+        <Header items={[]} />
+        <div className='body'>
+        </div>
+        <Footer />
+    </div>;
 }

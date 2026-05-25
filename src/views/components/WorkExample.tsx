@@ -1,32 +1,13 @@
 
-import React from 'react';
-import {
-    Link
-} from 'react-router-dom';
-
 import '@Styles/components/WorkExample.less';
-import {WorkExampleLogic} from '@Logic/components/WorkExampleLogic';
-import {
-    IWorkExample,
-    IWorkExampleProps
-} from '@Interfaces/components/IWorkExample';
+import {IWorkExampleProps} from '@Interfaces/components/IWorkExample';
+import {Link} from 'react-router-dom';
 
-export class WorkExample extends React.Component<IWorkExampleProps> implements IWorkExample {
-    private $logic: WorkExampleLogic;
-
-    constructor(props: IWorkExampleProps) {
-        super(props);
-        this.$logic = new WorkExampleLogic(this);
-    }
-
-    render() {
-        return <Link to={this.props.url}>
-            <div
-                className={this.$logic.getClassName()}
-            >
-                <span className='title'>{this.props.title}</span>
-                <div className='description'>{this.props.children}</div>
-            </div>
-        </Link>;
-    }
+export function WorkExample(props: IWorkExampleProps) {
+    return <Link to={props.url}>
+        <div className='WorkExample'>
+            <span className='title'>{props.title}</span>
+            <div className='description'>{props.children}</div>
+        </div>
+    </Link>;
 }

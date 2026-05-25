@@ -1,7 +1,4 @@
 
-import React from 'react';
-import {IComponentProps} from '@Interfaces/IComponentProps';
-
 export interface IHeaderItem {
     text: string;
     /**
@@ -14,8 +11,6 @@ export interface IHeaderItem {
     onClick: () => void;
 }
 
-export interface IHeaderProps extends IComponentProps {
+export interface IHeaderProps {
     items: Array<IHeaderItem>;
 }
-
-export type IHeader = React.Component<IHeaderProps>;

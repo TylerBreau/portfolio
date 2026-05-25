@@ -1,6 +1,4 @@
 
-import {IComponentProps} from '@Interfaces/IComponentProps';
-
-export interface IAboutMeProps extends IComponentProps {
+export interface IAboutMeProps {
     className?: string;
 }
