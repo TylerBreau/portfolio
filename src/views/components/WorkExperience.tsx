@@ -7,7 +7,7 @@ import {IWorkExperienceProps} from '@Interfaces/components/IWorkExperience';
 import {ComponentLogic} from '@Logic/ComponentLogic';
 
 export function WorkExperience(props: IWorkExperienceProps) {
-    return <div className={ComponentLogic.getClassName(['AboutMe'], props.className)}>
+    return <div className={ComponentLogic.getClassName(['WorkExperience'], props.className)}>
         <span className='row header'>Experience Summary</span>
         <div className='row'>
             <div>
