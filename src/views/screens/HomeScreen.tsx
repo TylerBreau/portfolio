@@ -4,43 +4,23 @@ import '@Styles/screens/HomeScreen.less';
 import {ScreenLogic} from '@Logic/ScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Footer} from '@Views/components/Footer';
-import {Header} from '@Views/components/Header';
 import {WorkExampleTile} from '@Views/components/WorkExampleTile';
 import {AboutMe} from '@Views/components/AboutMe';
 import {WorkExperience} from '@Views/components/WorkExperience';
 import {ScreenURL} from '@Interfaces/ScreenURL';
+import {PortfolioHeader} from '@Views/components/PortfolioHeader';
+import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
 
 export function HomeScreen() {
-    const [index, setIndex] = useState(0);
-
+    let [headerIndex, setHeaderIndex] = useState<PortfolioHeaderIndex>(PortfolioHeaderIndex.ABOUT_ME);
+    
     return <div className={ScreenLogic.getClassName(['HomeScreen'])}>
-        <Header
-            items={[
-                {
-                    text: 'About Me',
-                    isActive: index === 0,
-                    onClick: () => {
-                        setIndex(0);
-                    }
-                },
-                {
-                    text: 'Work Experience',
-                    isActive: index === 1,
-                    onClick: () => {
-                        setIndex(1);
-                    }
-                },
-                {
-                    text: 'Work Examples',
-                    isActive: index === 2,
-                    onClick: () => {
-                        setIndex(2);
-                    }
-                }
-            ]}
+        <PortfolioHeader
+            index={headerIndex}
+            onIndexChange={(index: PortfolioHeaderIndex) => setHeaderIndex(index)}
         />
         <SlideShow
-            index={index}
+            index={headerIndex}
             items={[
                 {
                     render: () => {
