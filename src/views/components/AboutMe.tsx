@@ -33,14 +33,6 @@ export function AboutMe(props: IAboutMeProps) {
                 <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
             </div>
             <div className='row'>
-                <span className='label'>Education & Experience:</span>
-                <span className='value'>
-                    2018 Grad of NBCC Moncton, Web and Mobile Application Development Program
-                    <br />
-                    Full-time Full-Stack Developer June 2018 to May 2026.
-                </span>
-            </div>
-            <div className='row'>
                 <span className='label'>Backstory:</span>
                 <p className='value'>
                     My first experience programming was through a high school Java class. During that school year, I remade the periodic table of elements in a Java program; it was an interesting project though it wasn&apos;t pretty.
