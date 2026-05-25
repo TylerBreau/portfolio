@@ -10,7 +10,6 @@ import '@Styles/app/Application.less';
 import {ScreenURL} from '@Interfaces/ScreenURL';
 
 import {HomeScreen} from '@Views/screens/HomeScreen';
-import {FluxArchitectureScreen} from '@Views/screens/FluxArchitectureScreen';
 
 export function Application() {
     return <div className='Application'>
@@ -18,7 +17,6 @@ export function Application() {
             <Routes>
                 <Route path='' element={<HomeScreen />} />
                 <Route path={ScreenURL.HOME} element={<HomeScreen />} />
-                <Route path={ScreenURL.FLUX_ARCHITECTURE} element={<FluxArchitectureScreen />} />
             </Routes>
         </HashRouter>
     </div>;

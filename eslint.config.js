@@ -47,7 +47,7 @@ export default [
         },
         rules: {
             "semi": [2, "always"],
-            "indent": ["error", 4],
+            "indent": ["error", 4, { SwitchCase: 1 }],
             "@typescript-eslint/no-empty-object-type": "off",
             "prefer-const": "off"
         },
