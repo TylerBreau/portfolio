@@ -53,7 +53,7 @@ export function WorkExperience(props: IWorkExperienceProps) {
                     <li><b>Utilized</b> mobile Camera, Accelerometer, Location, and Google maps for the mobile applications.</li>
                     <li><b>Collaborated</b> with peers to design, review, and maintain GIS software within the OOP paradigm.</li>
                     <li><b>Contributed</b>     significantly to TotalPave’s transition from startup to established commercial product, including but not limited to:</li>
-                    <li>
+                    <li style={{listStyle: 'none'}}>
                         <ul>
                             <li><b>Introducing</b> offline support so that applications can be used effectively without a data connection with deferred data syncing capabilities.</li>
                             <li><b>Implementing</b> tools for road asset condition management according to the PDRM 2013 specification and MTO provisions, SP-021, SP-023, SP-024, SP-025, and SP-026.</li>
