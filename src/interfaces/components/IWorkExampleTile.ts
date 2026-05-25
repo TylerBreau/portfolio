@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export interface IWorkExampleProps {
+export interface IWorkExampleTileProps {
     title: string;
     children: React.ReactNode;
     url: string;

@@ -5,7 +5,7 @@ import {ScreenLogic} from '@Logic/ScreenLogic';
 import {SlideShow} from '@Views/components/SlideShow';
 import {Footer} from '@Views/components/Footer';
 import {Header} from '@Views/components/Header';
-import {WorkExample} from '@Views/components/WorkExample';
+import {WorkExampleTile} from '@Views/components/WorkExampleTile';
 import {AboutMe} from '@Views/components/AboutMe';
 import {WorkExperience} from '@Views/components/WorkExperience';
 import {ScreenURL} from '@Interfaces/ScreenURL';
@@ -55,7 +55,7 @@ export function HomeScreen() {
                 {
                     render: () => {
                         return <div className='slideshow-content examples' key='examples'>
-                            <WorkExample
+                            <WorkExampleTile
                                 title='Flux Architecture'
                                 url={ScreenURL.FLUX_ARCHITECTURE}
                             >
@@ -66,7 +66,7 @@ export function HomeScreen() {
                                     <li>How should it be used?</li>
                                 </ul>
                                 <img src='FluxArchitectureImage.png' />
-                            </WorkExample>
+                            </WorkExampleTile>
                         </div>;
                     }
                 }
