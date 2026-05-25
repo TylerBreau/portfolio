@@ -14,14 +14,21 @@ export function WorkExperience(props: IWorkExperienceProps) {
                 <span>My work experience is focused on:</span>
                 <ul>
                     <li>React JSX</li>
-                    <li>Cordova</li>
                     <li>TypeScript (both frontend and backend)</li>
-                    <li>MySQL</li>
-                    <li>SQLite</li>
-                    <li>HTML/CSS/JavaScript</li>
+                    <li>Cordova</li>
                     <li>Less</li>
-                    <li>Flux Architecture</li>
+                    <li>SQLite & MySQL</li>
+                    <li>HTML/CSS/JavaScript</li>
                     <li>OOP Design</li>
+                </ul>
+                <span>I&apos;ve worked with the following environments:</span>
+                <ul>
+                    <li>Desktop Frontend</li>
+                    <li>Mobile Device Frontend</li>
+                    <li>Backend</li>
+                    <li>Database</li>
+                    <li>Cordova Native Plugins</li>
+                    <li>C++</li>
                 </ul>
                 <span>I also have work experience in:</span>
                 <ul>
