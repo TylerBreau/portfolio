@@ -9,9 +9,9 @@ export function AboutMe(props: IAboutMeProps) {
     return <div className={ComponentLogic.getClassName(['AboutMe'], props.className)}>
         <div className='content'>
             <div className='row name-row'>
+                <img src='ProfileImage.jpg' />
                 <span className='label'>Name:</span>
                 <span className='value'>Tyler Breau</span>
-                <img height='300px' width='300px' src='ProfileImage.jpg' />
             </div>
             <div className='row'>
                 <span className='label'>Occupation:</span>
