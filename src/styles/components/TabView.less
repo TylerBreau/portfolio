@@ -2,19 +2,22 @@
 @import '@Styles/color-scheme';
 
 .TabView {
-    .TabViewHeader {        
+    .TabViewHeader {
+        border: 1px solid @border-color;
+        border-bottom: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: scroll;
+        white-space: nowrap;
+
         .headerItem {
             margin: 0px 1px;
             padding: 3px;
             padding-bottom: 0;
-            border: 1px solid @border-color;
-            border-bottom: 0px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
             cursor: pointer;
 
             &.active {
-                border-color: @primary-color;
+                border-bottom: 1px solid @primary-color;
             }
         }
     }
