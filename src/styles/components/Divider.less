@@ -2,12 +2,23 @@
 
 .Divider {
     vertical-align: middle;
-    font-size: 50px;
-    line-height: @font-size;
     margin-right: 10px;
     margin-left: 10px;
-    
-    // Slightly adjust the vertical alignment of the dividers to center them.
-    position: relative;
-    top: -4px;
+
+    &.dot {
+        font-size: 50px;
+        line-height: @font-size;
+
+        // Slightly adjust the vertical alignment of the dividers to center them.
+        position: relative;
+        top: -4px;
+    }
+
+    &.line {
+        margin-right: 3px;
+        margin-left: 3px;
+        // Slightly adjust the vertical alignment of the dividers to center them.
+        position: relative;
+        top: -1px;
+    }
 }

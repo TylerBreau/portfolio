@@ -6,6 +6,7 @@ import {
     IHeaderProps,
     IHeaderItem
 } from '@Interfaces/components/IHeader';
+import {DividerType} from '@Interfaces/components/IDivider';
 
 import {Divider} from '@Views/components/Divider';
 
@@ -34,7 +35,7 @@ export function Header(props: IHeaderProps) {
         headerItems.push(createItem(items[i], i));
 
         if (i + 1 < length) {
-            headerItems.push(<Divider key={i + 1 + '-divider'} />);
+            headerItems.push(<Divider key={i + 1 + '-divider'} type={DividerType.DOT} />);
         }
     }
 
