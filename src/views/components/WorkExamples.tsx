@@ -1,4 +1,6 @@
 
+import "@Styles/components/WorkExamples.less";
+
 import {IWorkExamplesProps} from "@Interfaces/components/IWorkExamples";
 import {WorkExampleIndex} from "@Interfaces/components/IWorkExampleTile";
 
