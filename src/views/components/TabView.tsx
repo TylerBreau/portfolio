@@ -9,7 +9,7 @@ import {
 } from "@Interfaces/components/ITabView";
 import {DividerType} from "@Interfaces/components/IDivider";
 
-import {SlideShow} from "./SlideShow";
+import {SlideShow} from "@Views/components/SlideShow";
 import {Divider} from "@Views/components/Divider";
 
 export function TabView(props: ITabViewProps) {
