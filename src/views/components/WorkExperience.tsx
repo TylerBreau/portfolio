@@ -15,6 +15,7 @@ export function WorkExperience(props: IWorkExperienceProps) {
                 <ul>
                     <li>React JSX</li>
                     <li>TypeScript (both frontend and backend)</li>
+                    <li>GitHub</li>
                     <li>Cordova</li>
                     <li>Less</li>
                     <li>SQLite & MySQL</li>
@@ -49,7 +50,7 @@ export function WorkExperience(props: IWorkExperienceProps) {
             <span>Fredericton, NB</span><br />
             <div>
                 <ul>
-                    <li><b>Worked</b> with React, Typescript, Cordova, Less, SQLite, Jest, and MySQL to build and maintain a suite of iOS and Android apps, Customer Web Portal, and Server-Side codebase.</li>
+                    <li><b>Worked</b> with React, Typescript, GitHub, Cordova, Less, SQLite, Jest, and MySQL to build and maintain a suite of iOS and Android apps, Customer Web Portal, and Server-Side codebase.</li>
                     <li><b>Utilized</b> mobile Camera, Accelerometer, Location, and Google maps for the mobile applications.</li>
                     <li><b>Collaborated</b> with peers to design, review, and maintain GIS software within the OOP paradigm.</li>
                     <li><b>Contributed</b>     significantly to TotalPave’s transition from startup to established commercial product, including but not limited to:</li>
