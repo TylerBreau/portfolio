@@ -9,28 +9,30 @@ export function AboutMe(props: IAboutMeProps) {
     return <div className={ComponentLogic.getClassName(['AboutMe'], props.className)}>
         <div className='content'>
             <div className='row name-row'>
-                <img src='ProfileImage.jpg' />
-                <span className='label'>Name:</span>
-                <span className='value'>Tyler Breau</span>
-            </div>
-            <div className='row'>
-                <span className='label'>Occupation:</span>
-                <span className='value'>Web and Mobile Developer</span>
-            </div>
-            <div className='row'>
-                <span className='label list-label'>Traits:</span>
-                <ul className='value'>
-                    <li>Straight to the Point</li>
-                    <li>Hardworker</li>
-                    <li>Perfectionist</li>
-                    <li>Considerate</li>
-                    <li>Introverted</li>
-                    <li>Open-Minded</li>
-                </ul>
-            </div>
-            <div className='row'>
-                <span className='label'>Motto:</span>
-                <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
+                <img className='column img-col' src='ProfileImage.jpg' />
+                <div className='column content-col'>
+                    <span className='label'>Name:</span>
+                    <span className='value'>Tyler Breau</span>
+                    <div className='row'>
+                        <span className='label'>Occupation:</span>
+                        <span className='value'>Web and Mobile Developer</span>
+                    </div>
+                    <div className='row'>
+                        <span className='label list-label'>Traits:</span>
+                        <ul className='value'>
+                            <li>Straight to the Point</li>
+                            <li>Hardworker</li>
+                            <li>Perfectionist</li>
+                            <li>Considerate</li>
+                            <li>Introverted</li>
+                            <li>Open-Minded</li>
+                        </ul>
+                    </div>
+                    <div className='row'>
+                        <span className='label'>Motto:</span>
+                        <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
+                    </div>
+                </div>
             </div>
             <div className='row'>
                 <span className='label'>Backstory:</span>
