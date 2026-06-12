@@ -8,16 +8,33 @@
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         overflow: scroll;
-        white-space: nowrap;
-
-        .headerItem {
-            margin: 0px 1px;
-            padding: 3px;
-            padding-bottom: 0;
+        height: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .chevron {
+            margin: 0 5px;
             cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
 
-            &.active {
-                border-bottom: 1px solid @primary-color;
+        .content {
+            white-space: nowrap;
+            overflow: scroll;
+            height: 50px;
+            
+            .headerItem {
+                margin: 0px 1px;
+                padding: 3px;
+                padding-bottom: 0;
+                cursor: pointer;
+
+                &.active {
+                    border-bottom: 1px solid @primary-color;
+                }
             }
         }
     }
