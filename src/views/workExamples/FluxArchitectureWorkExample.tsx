@@ -24,10 +24,10 @@ export function FluxArchitectureWorkExample(props: IFluxArchitectureProps) {
         <p>
             The Flux Architecture is a design pattern that uses a dispatcher, stores, and actions to handle state management.<br /><br />
             The view calls on actions.<br />
-            The actions does something and then dispatches, potentially with data.<br />
+            The actions does work and then dispatches, optionally with data.<br />
             The Dispatcher notifies the stores.<br />
-            The stores check the dispatch event to see if it&apos;s something they care about. If they do care about it, they update their state accordingly and trigger an update event.<br />
-            The view listens to the store on update event and re-renders with the new store data.<br /><br />
+            The stores checks the dispatch event to see if it handles that kind of event. If so, it update its internal state accordingly and trigger an update event.<br />
+            The view listens to the store's on update event and re-renders with the new store data.<br /><br />
             As a concrete example, imagine you have a page that lists events. The events are stored on a server&apos;s database and are loaded on page load.<br />
             This series of operations would occur:
         </p>
