@@ -10,55 +10,58 @@ export function WorkExperience(props: IWorkExperienceProps) {
     return <div className={ComponentLogic.getClassName(['WorkExperience'], props.className)}>
         <span className='row header'>Experience Summary</span>
         <div className='row'>
-            <div>
-                <span>My work experience is focused on:</span>
-                <ul>
-                    <li>React JSX</li>
-                    <li>TypeScript (both frontend and backend)</li>
-                    <li>GitHub</li>
-                    <li>Cordova</li>
-                    <li>Less</li>
-                    <li>SQLite & MySQL</li>
-                    <li>HTML/CSS/JavaScript</li>
-                    <li>OOP Design</li>
-                </ul>
-                <span>I&apos;ve worked with the following environments:</span>
-                <ul>
-                    <li>Desktop Frontend</li>
-                    <li>Mobile Device Frontend</li>
-                    <li>Backend</li>
-                    <li>Database</li>
-                    <li>Cordova Native Plugins</li>
-                    <li>C++</li>
-                </ul>
-                <span>I also have work experience in:</span>
-                <ul>
-                    <li>PHP</li>
-                    <li>PHP Mailer</li>
-                    <li>TCPDF Library</li>
-                    <li>D3 (Data-Driven Documents) Library</li>
-                    <li>Cordova Plugin Development (Native Android and iOS)</li>
-                    <li>C++ Library Development</li>
-                </ul>
-            </div>
+            <span className='label'>Frontend</span>
+            <ul>
+                <li>React (TypeScript, JSX)</li>
+                <li>HTML, CSS, & JavaScript</li>
+                <li>LESS</li>
+                <li>Cordova</li>
+                <li>Google Maps (JavaScript & Cordova Google Maps plugin)</li>
+                <li>Cordova plugin development (native Android & iOS)</li>
+                <li>In-house C++ data-to-image rendering software (Integrated via Cordova plugins)</li>
+                <li>D3.js Library</li>
+            </ul>
+            <span className='label'>Backend & Data</span>
+            <ul>
+                <li>Node.js (TypeScript)</li>
+                <li>MySQL & SQLite</li>
+                <li>RESTful APIs</li>
+                <li>PHP & PHP Mailer</li>
+                <li>TCPDF Library</li>
+            </ul>
+            <span className='label'>Systems & Architecture</span>
+            <ul>
+                <li>Offline-first architecture</li>
+                <li>Layered Architecture</li>
+                <li>OOP Design</li>
+            </ul>
+            <span className='label'>Tools</span>
+            <ul>
+                <li>Git & GitHub</li>
+                <li>Jira</li>
+                <li>Confluence</li>
+                <li>Android Studio & Xcode</li>
+                <li>VirtualBox & Parallels</li>
+            </ul>
         </div>
         <span className='row header'>Employment History</span>
         <div className='row'>
             <span className='label'>Full Stack Software Developer</span><br />
             <span>May 2018 - May 2026</span><br />
             <span>TotalPave</span><br />
-            <span>Fredericton, NB</span><br />
+            <span>Fredericton, NB | Remote since 2020</span><br />
             <div>
                 <ul>
-                    <li><b>Worked</b> with React, Typescript, GitHub, Cordova, Less, SQLite, Jest, and MySQL to build and maintain a suite of iOS and Android apps, Customer Web Portal, and Server-Side codebase.</li>
-                    <li><b>Utilized</b> mobile Camera, Accelerometer, Location, and Google maps for the mobile applications.</li>
+                    <li><b>Worked</b> with React, TypeScript, GitHub, Cordova, LESS, SQLite, Jest, and MySQL to build and maintain a suite of iOS and Android apps, a Customer Web Portal, and a Server-Side codebase.</li>
+                    <li><b>Generated</b> charts for a Reports Dashboard using the D3 library.</li>
+                    <li><b>Utilized</b> mobile Camera, Accelerometer, Location, and Google Maps for the mobile applications.</li>
                     <li><b>Collaborated</b> with peers to design, review, and maintain GIS software within the OOP paradigm.</li>
-                    <li><b>Contributed</b>     significantly to TotalPave’s transition from startup to established commercial product, including but not limited to:</li>
+                    <li><b>Contributed</b> significantly to TotalPave&apos;s transition from startup to established commercial product, including but not limited to:</li>
                     <li style={{listStyle: 'none'}}>
                         <ul>
                             <li><b>Introducing</b> offline support so that applications can be used effectively without a data connection with deferred data syncing capabilities.</li>
                             <li><b>Implementing</b> tools for road asset condition management according to the PDRM 2013 specification and MTO provisions, SP-021, SP-023, SP-024, SP-025, and SP-026.</li>
-                            <li><b>Collaborated</b> with coworkers in the design and implementation of data to image software and a quad tree system used to power a tile map.</li>
+                            <li><b>Collaborated</b> with coworkers in the design and implementation of C++ data to image software and a quad tree system used to power a tile map.</li>
                         </ul>
                     </li>
                 </ul>
@@ -71,10 +74,10 @@ export function WorkExperience(props: IWorkExperienceProps) {
             <span>Moncton, NB</span><br />
             <div>
                 <ul>
-                    <li><b>Worked</b> with HTML, CSS, JavaScript, PHP, and MySQL to build a website on an Apache server with MariaDB. I also used the PuTTy, HeidiSQL, PHPMyAdmin, and WinSCP tools while building the website.</li>
-                    <li><b>Supported</b> Assistive Technology and browsers as old as IE 9 throughout the website.</li>
+                    <li><b>Worked</b> with HTML, CSS, JavaScript, PHP, and MySQL to build a website on an Apache server with MariaDB. I also used the PuTTY, HeidiSQL, PHPMyAdmin, and WinSCP tools while building the website.</li>
+                    <li><b>Supported</b> assistive technology and browsers as old as IE 9 throughout the website.</li>
                     <li><b>Implemented</b> automated emails with PHP Mailer.</li>
-                    <li><b>Generated</b> and <b>provided</b> downloadable PDFs with the TCPDF Library.</li>
+                    <li><b>Generated</b> downloadable PDFs with the TCPDF Library.</li>
                 </ul>
             </div>
         </div>
@@ -86,8 +89,8 @@ export function WorkExperience(props: IWorkExperienceProps) {
             <span>Moncton, NB</span><br />
             <div>
                 <ul>
-                    <li><b>Studied</b> the art of properly <b>planning</b>, <b>creating</b>, and <b>delivering</b> Information Technology Projects.</li>
-                    <li><b>Worked</b> with HTML, CSS, JavaScript, ASP.Net, Transact-SQL, React JS, Java EE, JSF, JSP, PHP, MySQL, Android and Swift.</li>
+                    <li><b>Focused</b> on <b>planning</b>, <b>creating</b>, and <b>delivering</b> Information Technology Projects.</li>
+                    <li><b>Worked</b> with HTML, CSS, JavaScript, ASP.NET, Transact-SQL, React, Java EE, JSF, JSP, PHP, MySQL, Android and Swift.</li>
                     <li><b>Used</b> N-Tier Methodology, MVC Architecture, Factory Pattern, and Test-Driven Development.</li>
                 </ul>
             </div>
