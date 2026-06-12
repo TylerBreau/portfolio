@@ -7,60 +7,50 @@ import {ComponentLogic} from '@Logic/ComponentLogic';
 
 export function AboutMe(props: IAboutMeProps) {
     return <div className={ComponentLogic.getClassName(['AboutMe'], props.className)}>
-        <div className='content'>
-            <div className='row name-row'>
-                <img className='column img-col' src='ProfileImage.jpg' />
-                <div className='column content-col'>
-                    <span className='label'>Name:</span>
-                    <span className='value'>Tyler Breau</span>
-                    <div className='row'>
-                        <span className='label'>Occupation:</span>
-                        <span className='value'>Web and Mobile Developer</span>
-                    </div>
-                    <div className='row'>
-                        <span className='label list-label'>Traits:</span>
-                        <ul className='value'>
-                            <li>Straight to the Point</li>
-                            <li>Hardworker</li>
-                            <li>Perfectionist</li>
-                            <li>Considerate</li>
-                            <li>Introverted</li>
-                            <li>Open-Minded</li>
-                        </ul>
-                    </div>
-                    <div className='row'>
-                        <span className='label'>Motto:</span>
-                        <span className='value'>If you are going to do something you mind as well do it right the first time.</span>
-                    </div>
-                </div>
-            </div>
-            <div className='row'>
-                <span className='label'>Backstory:</span>
-                <p className='value'>
-                    My first experience programming was through a high school Java class. During that school year, I remade the periodic table of elements in a Java program; it was an interesting project though it wasn&apos;t pretty.
-                    <br /><br />
-                    After high school, I planned to start a career in programming. I had first thought about going into game development but decided against it as I learned there were few local job opportunities; instead I went into web and mobile development and enrolled into NBCC Moncton.
-                    <br />
-                    Luckily for me, I had the fortune to be introduced to Neil Squire Society. Neil Squire Society hired me for summers of 2016 and 2017 to program a website that would host a digital survey for them. It was an interesting experience as my college was a two year course from 2017 to 2018, Neil Squire Society was intentionally looking for a high school graduate that was going into programming to tackle the project, a way to help out and provide opportunities. 
-                    <br />
-                    The manager helped get started with PHP and a simple development environment but I was expected to teach myself while still meeting the deadlines for the project. 
-                    <br /><br />
-                    It was a great opportunity to continue exploring programming while using the pay to fund my college tuition and other expenses. As expected, without proper education, the website was functional and looked fine but was not coded that well. I feel confident that I performed within expectations but after I had graduated from NBCC and gained some years of work experience, I could confidently say I would have done just about everything differently. The website would look very similar, just would have been built better.
-                    <br /><br />
-                    My time at NBCC was colorful... It was refreshing, frustrating, and informative. While there were times I didn&apos;t like, it was a good experience and help me grow.
-                    <br />
-                    NBCC&apos;s web and mobile course covered a wide range of topics, including a variety of languages: C#, Java, Objective C, HTML, CSS, JavaScript, and MySQL. We also explored several frameworks and environments: ASP.NET, Java Spring, JSP, iOS, and Android.
-                    <br />
-                    Additionally, the course touched on software architecture and class projects to explore more frameworks.
-                    <br />
-                    We were taught about organizing code into layers: interfaces, database, business, UI, etc. These lessons about organization played multiple roles but one of the largest benefits was to solve circular dependency problems. Each layer would need depend on other layers, creating a situation where Layer A and Layer B would depend on each other. The interfaces layer was used to solve this problem, it was a layer that everything depended on and the interfaces layer did not depend on any layer.
-                    <br />
-                    The class projects was focused on web frameworks and libraries, a fitting topic for a web and mobile course. I ended up choosing React, a framework whose focus is making the creation of UI more seamless. Creating complex UI can be a lot of work. You have to manage the state, UI interactions, and control how the UI reacts and updates to state changes. Having worked with React for years after college, I find it is a great library to simplify the entire process.
-                    <br /><br />
-                    With the help of my brother who was a developer, I did my OJT at TotalPave and continued working at TotalPave after graduating. During the eight years I worked at TotalPave, I helped it break out of the startup phase, assisting in developing major features. My biggest project at TotalPave was setting up full offline support for their data collection apps, a feature I started on early in my career and made several iterations on over the years. This feature was particularly important to TotalPave as the data their apps collected was visual and physical surveys of roads. Depending on where the roads were internet connection was not always reliable, so it was vital for the apps to be fully functional without internet.
-                    My brother was the lead developer and my mentor, with his help I&apos;ve grown significantly as a developer. During my time at TotalPave I&apos;ve progressed my experience from Junior to Senior developer, honing my ability to solve problems, utilizing design patterns, designing software, and developing a strong intuition for tackling coding tasks and fixing bugs.
-                </p>
-            </div>
-        </div>
+        <p>
+            <img src='ProfileImage.jpg' />
+            <b>Name & Occupation:</b>
+            <br />
+            Tyler Breau, Full Stack Software Developer
+            <br /><br />
+            <b>Backstory:</b>
+            <br />
+            My first experience programming was through a high school Java class. During that school year, I remade the periodic table of elements in a Java program; it was an interesting project though it wasn&apos;t pretty.
+            <br /><br />
+            After high school, I planned to start a career in programming. I had first thought about going into game development but decided against it as I learned there were few local job opportunities; instead I went into web and mobile development and enrolled into NBCC Moncton.
+            <br /><br />
+            Luckily for me, I was hired by Neil Squire Society for the summers of 2016 and 2017 to build a website that hosted a digital survey. It was an interesting experience, as these summers were before my first and second years of college. Neil Squire Society was specifically looking for a high school graduate who was going into programming to tackle the project, as a way to help out and provide opportunities. 
+            <br />
+            The manager helped me get started with PHP and a simple development environment but I was expected to teach myself while still meeting the deadlines for the project. It was a great opportunity to continue exploring programming while using the pay to fund my college tuition and other expenses.
+            <br />
+            While I am confident that I performed within expectations and that the website was functional and looked fine, unsurprisingly given my experience at the time, it was not coded that well. After graduating from NBCC and working for a few years, I could confidently say I would have done just about everything differently. The website would look very similar, just would have been built better.
+            <br /><br />
+            My time at NBCC was colorful - refreshing, frustrating, and informative. While there were times I didn&apos;t enjoy, it was a good experience that helped me grow.
+            <br />
+            The Web and Mobile Application Development program covered a wide range of technologies, including C#, Java, Objective C, HTML, CSS, JavaScript, and MySQL. We also explored several frameworks and environments such as ASP.NET, Java Spring, JSP, iOS, and Android. Beyond specific technologies, the program also introduced broader software design concepts and architecture principles.
+            <br />
+            One of the most impactful concepts for me was layered architecture, separating concerns between UI, business logic, and data access. In particular, using an interfaces layer to avoid tight coupling and circular dependencies.
+            <br />
+            One of the memorable class projects was picking a web framework to learn and present to my classmates. I chose React and got a head start by learning from my brother, who was also a software developer using React. At the time, it was a powerful introduction to building dynamic UI and it has remained a core part of my development work for many years after graduating. 
+            <br /><br />
+            Part of the college course was securing an OJT. With my brother vouching for me, I secured my OJT at TotalPave where I built a Cordova application that is still sold today, the TotalPave Tracker app. It was a simple application, drop a pin on an embedded Google Maps, take a picture, and input a title & description.
+            <br />
+            The main purpose of this app was to serve as a low-risk task for an intern while still generating value for the company, and to act as a prototype for a planned major feature: full offline support for their mobile applications.
+            <br />
+            My brother, the lead developer, designed the offline system, while I was responsible for implementing it.
+            <br /><br />
+            The main challenge with offline support was a bidirectional synchronization problem. TotalPave&apos;s applications are data collection tools used by field workers. Local devices would often contain data not yet present on the server, while the server would also contain updates not yet synchronized to the devices.
+            <br />
+            As part of this task, I handled multiple sources of truth, resynchronizing two databases, and maintaining data integrity while doing so. 
+            <br /><br />
+            After my OJT, I was hired full time at TotalPave, where I refactored one of their existing applications, TotalPave PCI, to introduce full offline support. This application supported visual road condition surveys performed according to industry standards.
+            <br />
+            The PCI app was a critical piece of software and one of TotalPave&apos;s primary revenue generating systems. This app faced the same overall problem as the Tracker application, with only a few notable differences. Unlike the Tracker application, PCI also displayed the client&apos;s road network — the collection of roads they are responsible for maintaining. In addition, the survey data it handled was significantly more complex.
+            <br />
+            <br />
+            Following PCI, I performed similar refactors for the IRI application, another primary revenue generating system and data collection tool used for instrumented road condition surveys performed according to a different industry standard.
+            <br />
+            Over the following years, I worked alongside my brother to maintain and develop TotalPave&apos;s ecosystem, including its customer web portal, backend services, and mobile applications (PCI, IRI, and Tracker). During this time, I progressed my career from college graduate to senior developer.
+        </p>
     </div>;
 }
