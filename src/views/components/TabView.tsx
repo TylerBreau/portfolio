@@ -73,7 +73,7 @@ export function TabView(props: ITabViewProps) {
                         </span>
                     ];
                     if (props.items.length -1 !== arrayIndex) {
-                        out.push(<Divider type={DividerType.LINE} />);
+                        out.push(<Divider key={'divider-' + arrayIndex} type={DividerType.LINE} />);
                     }
                     return out;
                 })}
