@@ -11,6 +11,20 @@ import {TechnicalArticleTile} from "./TechnicalArticleTile";
 export function TechnicalArticles(props: ITechnicalArticlesProps) {
     return <div className={ComponentLogic.getClassName(['TechnicalArticles'], props.className)}>
         <TechnicalArticleTile
+            title='TotalPave Offline Support'
+            onClick={() => props.onClick(TechnicalArticleIndex.TOTALPAVE_OFFLINE_SUPPORT)}
+        >
+            <span>Case study of my contributions to TotalPave&apos;s Offline Support system.</span>
+            <br />
+            <span>Challenges I handled:</span>
+            <ul style={{ paddingLeft: '30px' }}>
+                <li>Offline-first Architecture</li>
+                <li>Bidirectional Synchronization</li>
+                <li>Conflict Resolution & Hierarchical Data Merging</li>
+                <li>Long-Term Architectural Evolution</li>
+            </ul>
+        </TechnicalArticleTile>
+        <TechnicalArticleTile
             title='Flux Architecture'
             onClick={() => props.onClick(TechnicalArticleIndex.FLUX_ARCHITECURE)}
         >

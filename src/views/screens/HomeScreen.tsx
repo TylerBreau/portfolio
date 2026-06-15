@@ -11,8 +11,10 @@ import {Footer} from '@Views/components/Footer';
 import {AboutMe} from '@Views/components/AboutMe';
 import {WorkExperience} from '@Views/components/WorkExperience';
 import {PortfolioHeader} from '@Views/components/PortfolioHeader';
-import {FluxArchitectureTechnicalArticle} from '@Views/technicalArticles/FluxArchitectureTechnicalArticle';
 import {TechnicalArticles} from '@Views/components/TechnicalArticles';
+
+import {FluxArchitectureTechnicalArticle} from '@Views/technicalArticles/FluxArchitectureTechnicalArticle';
+import {TotalPaveOfflineSupportTechnicalArticle} from '@Views/technicalArticles/TotalPaveOfflineSupportTechnicalArticle';
 
 import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
 import {TechnicalArticleIndex} from '@Interfaces/components/ITechnicalArticleTile';
@@ -49,6 +51,7 @@ export function HomeScreen() {
             render: () => {
                 switch (technicalArticleIndex) {
                     case TechnicalArticleIndex.FLUX_ARCHITECURE: return <FluxArchitectureTechnicalArticle className='slideshow-content' />;
+                    case TechnicalArticleIndex.TOTALPAVE_OFFLINE_SUPPORT: return <TotalPaveOfflineSupportTechnicalArticle className='slideshow-content' />;
                     default: return null;
                 }
             }
