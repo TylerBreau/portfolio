@@ -40,7 +40,7 @@ export function HomeScreen() {
                     key='TechnicalAchievements'
                     className='slideshow-content'
                     onClick={(index: TechnicalArticleIndex) => {
-                        setHeaderIndex(PortfolioHeaderIndex.TECHNICAL_ARTICLE_TILES);
+                        setHeaderIndex(PortfolioHeaderIndex.TECHNICAL_ACHIEVEMENTS);
                         setTechnicalArticleIndex(index);
                     }}
                 />;
