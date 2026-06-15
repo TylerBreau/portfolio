@@ -41,6 +41,5 @@ export function Header(props: IHeaderProps) {
 
     return <div className='Header'>
         {headerItems}
-        {/* <div className="content">{headerItems}</div> */}
     </div>;
 }
