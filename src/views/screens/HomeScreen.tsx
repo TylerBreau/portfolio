@@ -13,6 +13,7 @@ import {WorkExperience} from '@Views/components/WorkExperience';
 import {PortfolioHeader} from '@Views/components/PortfolioHeader';
 import {FluxArchitectureTechnicalArticle} from '@Views/technicalArticles/FluxArchitectureTechnicalArticle';
 import {TechnicalArticles} from '@Views/components/TechnicalArticles';
+import {TechnicalAchievements} from '@Views/components/TechnicalAchievements';
 
 import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
 import {TechnicalArticleIndex} from '@Interfaces/components/ITechnicalArticleTile';
@@ -31,6 +32,18 @@ export function HomeScreen() {
         {
             render: () => {
                 return <WorkExperience key='WorkExperience' className='slideshow-content' />;
+            }
+        },
+        {
+            render: () => {
+                return <TechnicalAchievements
+                    key='TechnicalAchievements'
+                    className='slideshow-content'
+                    onClick={(index: TechnicalArticleIndex) => {
+                        setHeaderIndex(PortfolioHeaderIndex.TECHNICAL_ARTICLE_TILES);
+                        setTechnicalArticleIndex(index);
+                    }}
+                />;
             }
         },
         {
