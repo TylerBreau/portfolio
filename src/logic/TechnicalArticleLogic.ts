@@ -1,4 +1,6 @@
 
+import '@Styles/technicalArticles/TechnicalArticle.less';
+
 export class TechnicalArticleLogic {
     /**
      * 
