@@ -11,16 +11,16 @@ import {Footer} from '@Views/components/Footer';
 import {AboutMe} from '@Views/components/AboutMe';
 import {WorkExperience} from '@Views/components/WorkExperience';
 import {PortfolioHeader} from '@Views/components/PortfolioHeader';
-import {FluxArchitectureWorkExample} from '@Views/workExamples/FluxArchitectureWorkExample';
-import {WorkExamples} from '@Views/components/WorkExamples';
+import {FluxArchitectureTechnicalArticle} from '@Views/technicalArticles/FluxArchitectureTechnicalArticle';
+import {TechnicalArticles} from '@Views/components/TechnicalArticles';
 
 import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
-import {WorkExampleIndex} from '@Interfaces/components/IWorkExampleTile';
+import {TechnicalArticleIndex} from '@Interfaces/components/ITechnicalArticleTile';
 import {ISlideShowItem} from '@Interfaces/components/ISlideShow';
 
 export function HomeScreen() {
     let [headerIndex, setHeaderIndex] = useState<PortfolioHeaderIndex>(PortfolioHeaderIndex.ABOUT_ME);
-    let [workExampleIndex, setWorkExampleIndex] = useState<WorkExampleIndex | null>(null);
+    let [technicalArticleIndex, setTechnicalArticleIndex] = useState<TechnicalArticleIndex | null>(null);
 
     let slideShowItems: ISlideShowItem[] = [
         {
@@ -35,20 +35,20 @@ export function HomeScreen() {
         },
         {
             render: () => {
-                return <WorkExamples
-                    key='WorkExamples'
+                return <TechnicalArticles
+                    key='TechnicalArticles'
                     className='slideshow-content'
-                    onClick={(index: WorkExampleIndex) => {
+                    onClick={(index: TechnicalArticleIndex) => {
                         setHeaderIndex(PortfolioHeaderIndex.WORK_EXAMPLE);
-                        setWorkExampleIndex(index);
+                        setTechnicalArticleIndex(index);
                     }}
                 />;
             }
         },
         {
             render: () => {
-                switch (workExampleIndex) {
-                    case WorkExampleIndex.FLUX_ARCHITECURE: return <FluxArchitectureWorkExample className='slideshow-content' />;
+                switch (technicalArticleIndex) {
+                    case TechnicalArticleIndex.FLUX_ARCHITECURE: return <FluxArchitectureTechnicalArticle className='slideshow-content' />;
                     default: return null;
                 }
             }
@@ -61,10 +61,10 @@ export function HomeScreen() {
             onIndexChange={(index: PortfolioHeaderIndex) => {
                 setHeaderIndex(index);
                 if (index !== PortfolioHeaderIndex.WORK_EXAMPLE) {
-                    setWorkExampleIndex(null);
+                    setTechnicalArticleIndex(null);
                 }
             }}
-            subscreen={HomeScreenLogic.getSubscreenHeaderItem(workExampleIndex)}
+            subscreen={HomeScreenLogic.getSubscreenHeaderItem(technicalArticleIndex)}
         />
         <SlideShow
             index={headerIndex}

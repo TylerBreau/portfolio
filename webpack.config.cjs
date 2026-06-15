@@ -15,7 +15,7 @@ module.exports = {
             '@Res': path.resolve(__dirname, './src/res'),
             '@Logic': path.resolve(__dirname, './src/logic'),
             '@Interfaces': path.resolve(__dirname, './src/interfaces'),
-            '@WorkExamples': path.resolve(__dirname, './src/res/workExamples')
+            '@TechnicalArticles': path.resolve(__dirname, './src/res/technicalArticles')
         }
     },
     module: {
@@ -25,7 +25,7 @@ module.exports = {
                     /(views).*\.tsx$/,
                     /(logic).*\.ts$/,
                     /(interfaces).*\.ts$/,
-                    /(workExamples).*\.(ts|tsx)$/
+                    /(technicalArticles).*\.(ts|tsx)$/
                 ],
                 use: {
                     loader: 'babel-loader',

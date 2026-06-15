@@ -1,26 +1,26 @@
 
-import '@Styles/workExamples/FluxArchitectureWorkExample.less';
+import '@Styles/technicalArticles/FluxArchitectureTechnicalArticle.less';
 
-import {IFluxArchitectureProps} from '@Interfaces/workExamples/IFluxArchitecture';
+import {IFluxArchitectureProps} from '@Interfaces/technicalArticles/IFluxArchitecture';
 
-import {WorkExampleLogic} from '@Logic/WorkExampleLogic';
+import {TechnicalArticleLogic} from '@Logic/TechnicalArticleLogic';
 
 import {TabView} from '@Views/components/TabView';
 
-import IActionCode from '@WorkExamples/fluxArchitecture/IAction.txt';
-import ActionCode from '@WorkExamples/fluxArchitecture/Action.txt';
-import IActionDataCode from '@WorkExamples/fluxArchitecture/IActionData.txt';
-import ActionDataCode from '@WorkExamples/fluxArchitecture/ActionData.txt';
-import IDispatcherCode from '@WorkExamples/fluxArchitecture/IDispatcher.txt';
-import DispatcherCode from '@WorkExamples/fluxArchitecture/Dispatcher.txt';
-import IStoreCode from '@WorkExamples/fluxArchitecture/IStore.txt';
-import StoreCode from '@WorkExamples/fluxArchitecture/Store.txt';
-import EventScreenCode from '@WorkExamples/fluxArchitecture/EventScreen.txt';
-import EventStoreCode from '@WorkExamples/fluxArchitecture/EventStore.txt';
-import LoadEventsActionCode from '@WorkExamples/fluxArchitecture/LoadEventsAction.txt';
+import IActionCode from '@TechnicalArticles/fluxArchitecture/IAction.txt';
+import ActionCode from '@TechnicalArticles/fluxArchitecture/Action.txt';
+import IActionDataCode from '@TechnicalArticles/fluxArchitecture/IActionData.txt';
+import ActionDataCode from '@TechnicalArticles/fluxArchitecture/ActionData.txt';
+import IDispatcherCode from '@TechnicalArticles/fluxArchitecture/IDispatcher.txt';
+import DispatcherCode from '@TechnicalArticles/fluxArchitecture/Dispatcher.txt';
+import IStoreCode from '@TechnicalArticles/fluxArchitecture/IStore.txt';
+import StoreCode from '@TechnicalArticles/fluxArchitecture/Store.txt';
+import EventScreenCode from '@TechnicalArticles/fluxArchitecture/EventScreen.txt';
+import EventStoreCode from '@TechnicalArticles/fluxArchitecture/EventStore.txt';
+import LoadEventsActionCode from '@TechnicalArticles/fluxArchitecture/LoadEventsAction.txt';
 
-export function FluxArchitectureWorkExample(props: IFluxArchitectureProps) {
-    return <div className={WorkExampleLogic.getClassName(['FluxArchitectureWorkExample'], props.className)}>
+export function FluxArchitectureTechnicalArticle(props: IFluxArchitectureProps) {
+    return <div className={TechnicalArticleLogic.getClassName(['FluxArchitectureTechnicalArticle'], props.className)}>
         <p>
             The Flux Architecture is a design pattern that uses a dispatcher, stores, and actions to handle state management.<br /><br />
             The view calls on actions.<br />

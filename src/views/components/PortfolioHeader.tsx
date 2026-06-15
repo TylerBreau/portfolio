@@ -24,10 +24,10 @@ export function PortfolioHeader(props: IPortfolioHeaderProps) {
             }
         },
         {
-            text: 'Work Examples',
-            isActive: props.index === PortfolioHeaderIndex.WORK_EXAMPLE_TILES,
+            text: 'Technical Articles',
+            isActive: props.index === PortfolioHeaderIndex.TECHNICAL_ARTICLE_TILES,
             onClick: () => {
-                props.onIndexChange(PortfolioHeaderIndex.WORK_EXAMPLE_TILES);
+                props.onIndexChange(PortfolioHeaderIndex.TECHNICAL_ARTICLE_TILES);
             }
         }
     ];

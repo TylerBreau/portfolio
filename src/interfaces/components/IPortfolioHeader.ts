@@ -4,7 +4,7 @@ import {IHeaderItem} from '@Interfaces/components/IHeader';
 export enum PortfolioHeaderIndex {
     ABOUT_ME = 0,
     WORK_EXPERIENCE = 1,
-    WORK_EXAMPLE_TILES = 2,
+    TECHNICAL_ARTICLE_TILES = 2,
     WORK_EXAMPLE = 3
 }
 

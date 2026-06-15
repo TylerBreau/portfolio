@@ -1,5 +1,5 @@
 
-export class WorkExampleLogic {
+export class TechnicalArticleLogic {
     /**
      * 
      * @param classNames 
@@ -8,9 +8,9 @@ export class WorkExampleLogic {
      */
     public static getClassName(classNames: string[] = [], classNameProp: string | null = null): string {
         if (classNameProp) {
-            return ['WorkExample', ...classNames, classNameProp].join(' ');
+            return ['TechnicalArticle', ...classNames, classNameProp].join(' ');
         }
 
-        return ['WorkExample', ...classNames].join(' ');
+        return ['TechnicalArticle', ...classNames].join(' ');
     }
 }

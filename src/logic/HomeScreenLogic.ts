@@ -1,11 +1,11 @@
 
 import {IHeaderItem} from "@Interfaces/components/IHeader";
-import {WorkExampleIndex} from "@Interfaces/components/IWorkExampleTile";
+import {TechnicalArticleIndex} from "@Interfaces/components/ITechnicalArticleTile";
 
 export class HomeScreenLogic {
-    public static getSubscreenHeaderItem(index: WorkExampleIndex | null): IHeaderItem | null {
+    public static getSubscreenHeaderItem(index: TechnicalArticleIndex | null): IHeaderItem | null {
         switch (index) {
-            case WorkExampleIndex.FLUX_ARCHITECURE:
+            case TechnicalArticleIndex.FLUX_ARCHITECURE:
                 return {
                     text: 'Flux Architecture',
                     isActive: true,
