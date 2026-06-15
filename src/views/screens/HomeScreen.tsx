@@ -69,6 +69,7 @@ export function HomeScreen() {
         <SlideShow
             index={headerIndex}
             items={slideShowItems}
+            shouldLimitHeight={false}
         />
         <Footer />
     </div>;
