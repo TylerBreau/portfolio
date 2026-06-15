@@ -5,7 +5,7 @@ export enum PortfolioHeaderIndex {
     ABOUT_ME = 0,
     WORK_EXPERIENCE = 1,
     TECHNICAL_ARTICLE_TILES = 2,
-    WORK_EXAMPLE = 3
+    TECHNICAL_ARTICLE = 3
 }
 
 export type TOnIndexChange = (index: PortfolioHeaderIndex) => void;

@@ -39,7 +39,7 @@ export function HomeScreen() {
                     key='TechnicalArticles'
                     className='slideshow-content'
                     onClick={(index: TechnicalArticleIndex) => {
-                        setHeaderIndex(PortfolioHeaderIndex.WORK_EXAMPLE);
+                        setHeaderIndex(PortfolioHeaderIndex.TECHNICAL_ARTICLE);
                         setTechnicalArticleIndex(index);
                     }}
                 />;
@@ -60,7 +60,7 @@ export function HomeScreen() {
             index={headerIndex}
             onIndexChange={(index: PortfolioHeaderIndex) => {
                 setHeaderIndex(index);
-                if (index !== PortfolioHeaderIndex.WORK_EXAMPLE) {
+                if (index !== PortfolioHeaderIndex.TECHNICAL_ARTICLE) {
                     setTechnicalArticleIndex(null);
                 }
             }}
