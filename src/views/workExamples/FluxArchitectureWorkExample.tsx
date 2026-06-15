@@ -27,7 +27,7 @@ export function FluxArchitectureWorkExample(props: IFluxArchitectureProps) {
             The actions does work and then dispatches, optionally with data.<br />
             The Dispatcher notifies the stores.<br />
             The stores checks the dispatch event to see if it handles that kind of event. If so, it update its internal state accordingly and trigger an update event.<br />
-            The view listens to the store's on update event and re-renders with the new store data.<br /><br />
+            The view listens to the store&apos;s on update event and re-renders with the new store data.<br /><br />
             As a concrete example, imagine you have a page that lists events. The events are stored on a server&apos;s database and are loaded on page load.<br />
             This series of operations would occur:
         </p>
