@@ -17,6 +17,12 @@ export class HomeScreenLogic {
                     isActive: true,
                     onClick: () => {}
                 };
+            case TechnicalArticleIndex.TOTALPAVE_ROAD_NETWORK_RENDERER:
+                return {
+                    text: 'Road Network Renderer',
+                    isActive: true,
+                    onClick: () => {}
+                };
             default: return null;
         }
     }
