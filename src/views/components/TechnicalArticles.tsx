@@ -14,7 +14,7 @@ export function TechnicalArticles(props: ITechnicalArticlesProps) {
             title='Flux Architecture'
             onClick={() => props.onClick(TechnicalArticleIndex.FLUX_ARCHITECURE)}
         >
-            <span>Lesson on Flux Architecture</span>
+            <div style={{ textAlign: 'center' }}>Lesson on Flux Architecture</div>
             <ul>
                 <li>What is it?</li>
                 <li>How to implement it?</li>
