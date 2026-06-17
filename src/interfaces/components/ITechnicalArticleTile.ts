@@ -9,5 +9,6 @@ export interface ITechnicalArticleTileProps {
 
 export enum TechnicalArticleIndex {
     FLUX_ARCHITECURE = 0,
-    TOTALPAVE_OFFLINE_SUPPORT = 1
+    TOTALPAVE_OFFLINE_SUPPORT = 1,
+    TOTALPAVE_ROAD_NETWORK_RENDERER = 2
 }

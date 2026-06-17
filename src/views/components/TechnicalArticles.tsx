@@ -25,6 +25,19 @@ export function TechnicalArticles(props: ITechnicalArticlesProps) {
             </ul>
         </TechnicalArticleTile>
         <TechnicalArticleTile
+            title='TotalPave Road Network Renderer'
+            onClick={() => props.onClick(TechnicalArticleIndex.TOTALPAVE_ROAD_NETWORK_RENDERER)}
+        >
+            <span>Case study of designing and implementing a custom road network rendering system.</span>
+            <br />
+            <span>Topics include:</span>
+            <ul style={{ paddingLeft: '30px' }}>
+                <li>C++ Data to Image Software</li>
+                <li>Bridging C++ with Android and iOS</li>
+                <li>Google Maps SDK Tile Layers</li>
+            </ul>
+        </TechnicalArticleTile>
+        <TechnicalArticleTile
             title='Flux Architecture'
             onClick={() => props.onClick(TechnicalArticleIndex.FLUX_ARCHITECURE)}
         >
