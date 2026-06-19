@@ -115,7 +115,7 @@ export function TotalPaveOfflineSupportTechnicalArticle(props: ITotalPaveOffline
         <br /><br />
         For example, a client and a colleague may both modify the same data. The colleague&apos;s modifications have the more recent last modified date and are uploaded to the server first. The client may have a weak but usable internet connection, causing their upload request to take longer than expected. The data being uploaded by the client is older than the data already stored on the server, even though it was recently modified from the client&apos;s perspective.
         <br /><br />
-        If I let the upload HTTP handler overwrite that data, I&apos;m allowing old data to overwrite new data. Therefore, like the sync HTTP handler and saving data to the client's device, the upload HTTP handler must also detect divergent state.
+        If I let the upload HTTP handler overwrite that data, I&apos;m allowing old data to overwrite new data. Therefore, like the sync HTTP handler and saving data to the client&apos;s device, the upload HTTP handler must also detect divergent state.
         <br /><br />
         However, the upload HTTP handler&apos;s responsibility is to upload data. The sync HTTP handler&apos;s responsibility is to determine how to resynchronize. The approach I used here was a separation of concern.
         <br />
