@@ -11,6 +11,12 @@ export class HomeScreenLogic {
                     isActive: true,
                     onClick: () => {}
                 };
+            case TechnicalArticleIndex.TOTALPAVE_OFFLINE_SUPPORT:
+                return {
+                    text: 'TotalPave Offline Support',
+                    isActive: true,
+                    onClick: () => {}
+                };
             default: return null;
         }
     }
