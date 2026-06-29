@@ -16,6 +16,7 @@ import {TechnicalArticles} from '@Views/components/TechnicalArticles';
 import {FluxArchitectureTechnicalArticle} from '@Views/technicalArticles/FluxArchitectureTechnicalArticle';
 import {TotalPaveOfflineSupportTechnicalArticle} from '@Views/technicalArticles/TotalPaveOfflineSupportTechnicalArticle';
 import {TotalPaveRoadNetworkRendererTechnicalArticle} from '@Views/technicalArticles/TotalPaveRoadNetworkRendererTechnicalArticle';
+import {TotalPaveMTOSupportTechnicalArticle} from '@Views/technicalArticles/TotalPaveMTOSupportTechnicalArticle';
 
 import {PortfolioHeaderIndex} from '@Interfaces/components/IPortfolioHeader';
 import {TechnicalArticleIndex} from '@Interfaces/components/ITechnicalArticleTile';
@@ -54,6 +55,7 @@ export function HomeScreen() {
                     case TechnicalArticleIndex.FLUX_ARCHITECURE: return <FluxArchitectureTechnicalArticle className='slideshow-content' />;
                     case TechnicalArticleIndex.TOTALPAVE_OFFLINE_SUPPORT: return <TotalPaveOfflineSupportTechnicalArticle className='slideshow-content' />;
                     case TechnicalArticleIndex.TOTALPAVE_ROAD_NETWORK_RENDERER: return <TotalPaveRoadNetworkRendererTechnicalArticle className='slideshow-content' />;
+                    case TechnicalArticleIndex.TOTALPAVE_MTO_SUPPORT: return <TotalPaveMTOSupportTechnicalArticle className='slideshow-content' />;
                     default: return null;
                 }
             }
