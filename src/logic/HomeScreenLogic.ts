@@ -23,6 +23,12 @@ export class HomeScreenLogic {
                     isActive: true,
                     onClick: () => {}
                 };
+            case TechnicalArticleIndex.TOTALPAVE_MTO_SUPPORT:
+                return {
+                    text: 'MTO Support',
+                    isActive: true,
+                    onClick: () => {}
+                };
             default: return null;
         }
     }

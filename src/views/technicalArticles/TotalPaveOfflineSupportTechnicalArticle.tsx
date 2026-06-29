@@ -252,7 +252,7 @@ export function TotalPaveOfflineSupportTechnicalArticle(props: ITotalPaveOffline
         <h1>MTO Support Project</h1>
         Years later, I had progressed from a college graduate to a Senior Developer. TotalPave was looking to support an additional industry standard for data collection in the PCI application, specifically to expand into Ontario&apos;s market.
         <br />
-        Ontario follows a collection of standards and provisions recommended or required by the Ministry of Transportation of Ontario (MTO). The PCI application up to this point was designed solely for the standard ASTM D6433 Rev 23. The full details of this project will be covered in the MTO Support Project article. This article will focus specifically on the changes made to the Offline Support and Resynchronization systems.
+        Ontario follows a collection of standards and provisions recommended or required by the Ministry of Transportation of Ontario (MTO). The PCI application up to this point was designed solely for the standard ASTM D6433 Rev 23. The full details of this project will be covered in the MTO Support article. This article will focus specifically on the changes made to the Offline Support and Resynchronization systems.
         <br /><br />
         This project faced a number of significant challenges that involved major refactors across TotalPave&apos;s entire tech stack. For the refactors related to Offline Support, the challenges included:
         <ul>

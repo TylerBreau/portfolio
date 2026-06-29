@@ -25,6 +25,19 @@ export function TechnicalArticles(props: ITechnicalArticlesProps) {
             </ul>
         </TechnicalArticleTile>
         <TechnicalArticleTile
+            title='TotalPave MTO Support'
+            onClick={() => props.onClick(TechnicalArticleIndex.TOTALPAVE_MTO_SUPPORT)}
+        >
+            <span>Case study of my contributions to supporting a new standard of visual road condition surveys for TotalPave.</span>
+            <br />
+            <span>Challenges I handled:</span>
+            <ul style={{ paddingLeft: '30px' }}>
+                <li>Technical Documentation Analysis & Requirements Translation</li>
+                <li>Database Redesign</li>
+                <li>Major Architectural Redesigns</li>
+            </ul>
+        </TechnicalArticleTile>
+        <TechnicalArticleTile
             title='TotalPave Road Network Renderer'
             onClick={() => props.onClick(TechnicalArticleIndex.TOTALPAVE_ROAD_NETWORK_RENDERER)}
         >
