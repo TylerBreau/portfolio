@@ -59,8 +59,8 @@ export function WorkExperience(props: IWorkExperienceProps) {
                     <li><b>Contributed</b> significantly to TotalPave&apos;s transition from startup to established commercial product, including but not limited to:</li>
                     <li style={{listStyle: 'none'}}>
                         <ul>
-                            <li><b>Introducing</b> offline support so that applications can be used effectively without a data connection with deferred data syncing capabilities.</li>
-                            <li><b>Implementing</b> tools for road asset condition management according to the PDRM 2013 specification and MTO provisions, SP-021, SP-023, SP-024, SP-025, and SP-026.</li>
+                            <li><b>Built</b> Offline-first architecture so that applications can be used effectively without a data connection with deferred data syncing capabilities. This system included bidirectional synchronization, hierarchical dataset merging, data conflict resolution, data model constraints, and a NTP solution to ensure last modified timestamps were accurate.</li>
+                            <li><b>Designing</b> and <b>implementing</b> support for a new standard of road condition surveys according to the PDRM 2013 specification and MTO provisions, SP-021, SP-023, SP-024, SP-025, and SP-026.</li>
                             <li><b>Collaborated</b> with coworkers in the design and implementation of C++ data to image software and a quad tree system used to power a tile map.</li>
                         </ul>
                     </li>
