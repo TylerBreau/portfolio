@@ -6,21 +6,39 @@ import {TechnicalArticleLogic} from '@Logic/TechnicalArticleLogic';
 export function TotalPaveOfflineSupportTechnicalArticle(props: ITotalPaveOfflineSupportProps) {
     return <div className={TechnicalArticleLogic.getClassName(['TotalPaveOfflineSupportArticle'], props.className)}>
         <h1>Executive Summary</h1>
-        Over the course of my eight years at TotalPave, I designed, expanded, and maintained TotalPave&apos;s offline support infrastructure across several projects.
+        TotalPave&apos;s Offline Support is a collection of systems that work together to manage the flow and lifecycle of data. It is a system that evolved through multiple major engineering iterations over eight years.
+        <br /><br />
+        TotalPave&apos;s mobile applications are all data collection apps, with a focus on road condition surveys.
         <br />
-        Offline Support began as a prototype built in a brand new mobile application during my college OJT. Over eight years, I evolved it into a critical piece of shared infrastructure used by all of TotalPave&apos;s mobile applications, enabling field workers to collect and access road condition data in areas with unreliable internet connectivity while maintaining data consistency between mobile devices and servers.
+        Depending on the location of the client&apos;s roads, the device might not have a useable internet connection. Before offline support, collected data was often immediately uploaded to the server and if there was no internet that data could be lost. 
+        <br /><br />
+        The applications also display each client&apos;s road network. In the PCI application, this data is essential. The app cannot function without it.
+        <br /><br />
+        Offline Support solved these problems, making the applications reliable in field environments with limited or no connectivity.
         <br />
+        However, the management of data became a complicated challenge. Once offline support was introduced, both the mobile devices and the server could independently accumulate changes, requiring a way to reconcile differences when they reconnected.
+        <br /><br />
         The evolution of this system followed several major milestones:
+        <ul>
+            <li>During my OJT, I built a new mobile application, the Tracker application. The Lead Developer designed this iteration of Offline Support while I was responsible for implementing it. The Tracker application was a low-risk production application used to validate the architecture before introducing it to TotalPave&apos;s critical applications.</li>
+            <li>As a full-time developer, I expanded Offline Support to the PCI application, adapting the architecture to handle significantly larger datasets, complex hierarchical data structures, hierarchical dataset merging, data integrity constraints, and inaccurate device time.</li>
+            <li>Following my work with the PCI application, I introduced Offline Support to the IRI application by reusing shared architecture while adapting it for a simpler read-only synchronization workflow.</li>
+            <li>As a Senior Developer, I contributed to major architectural redesigns across TotalPave&apos;s technology stack, including redesigning Offline Support from per-entity to per-attribute synchronization and preparing the system for future scalability.</li>
+            <li>My final work on Offline Support transformed the system from a solution designed for a single data collection standard into a framework capable of supporting multiple industry standards, including the fresh implementation of Ontario&apos;s Ministry of Transportation (MTO) road condition survey standards.</li>
+        </ul>
+        The collection of systems can largely be split into three pieces. The Synchronization Process, the Upload Process, and Saving data to the application&apos;s SQLite database.
+        <br /><br />
+        The Synchronization Process determined how to resynchronize the databases of a mobile device and the server. It would analyze manifests describing the data in both environments and generate a set of instructions that safely merged changes while preventing data loss.
+        <br /><br />
+        The Upload Process accepted new data from mobile devices while protecting the server from outdated or invalid information. If the server already contained newer information, the upload was rejected and the application was instructed to resynchronize instead of risking accidental data loss.
+        <br /><br />
+        Saving data was more complex than simply writing it to the device&apos;s permanent storage. This applied regardless of whether the data came from the user&apos;s recent activity or from downloaded updates. Several consistency and conflict-resolution challenges had to be addressed.
         <br />
-        During my OJT, I implemented the first version of Offline Support in the Tracker application, a low-risk production application used to validate the architecture before introducing it to larger systems.
+        For example, a user may modify data while offline, while their coworker modifies the same data.
+        <br />
+        If the user&apos;s changes were more recent, they were kept. If their coworker&apos;s changes were more recent, the user&apos;s changes were overwritten. There was no single rule that applied in all cases; conflict resolution depended on the specific data and context.
         <br /><br />
-        As a full-time developer, I expanded Offline Support to the PCI application, adapting the architecture to handle significantly larger datasets, complex hierarchical data structures, dataset merging, data integrity constraints, and inaccurate device timestamps.
-        <br /><br />
-        Following my work with the PCI application, I introduced Offline Support to the IRI application by reusing the shared architecture while adapting it for a simpler read-only synchronization workflow.
-        <br /><br />
-        As a Senior Developer, I contributed to major architectural redesigns across TotalPave&apos;s technology stack, including redesigning Offline Support from per-entity to per-attribute synchronization and preparing the system for future scalability.
-        <br /><br />
-        My final work on Offline Support transformed the system from a solution designed for a single data collection standard into a framework capable of supporting multiple industry standards, including the fresh implementation of Ontario&apos;s MTO data collection requirements.
+        In addition, while performing these operations, the two datasets were often merged together and the system had to ensure that data model constraints were still respected. 
         <br /><br />
         The following provides a detailed technical breakdown of the challenges encountered, the architectural decisions made, and the solutions implemented.
         <h1>The Problem</h1>
