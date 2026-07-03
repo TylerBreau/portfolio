@@ -6,36 +6,60 @@ import {TechnicalArticleLogic} from '@Logic/TechnicalArticleLogic';
 export function TotalPaveRoadNetworkRendererTechnicalArticle(props: ITotalPaveRoadNetworkRendererProps) {
     return <div className={TechnicalArticleLogic.getClassName(['TotalPaveRoadNetworkRendererTechnicalArticle'], props.className)}>
         <h1>Executive Summary</h1>
-        Road Network Renderer was created to solve scalability issues in TotalPave&apos;s mobile applications. TotalPave&apos;s software was for clients who maintained road networks. The applications displayed the client&apos;s road network and other related data inside Google Maps. TotalPave&apos;s average client managed between two thousand and five thousand roads, while a prospective client managed nearly seventy thousand. Existing approaches to displaying this data on the maps were already approaching their practical limits and could not support a network of this size.
+        The Road Network Renderer was developed to address critical scalability limits in TotalPave’s mobile applications. These applications display client road networks and related survey data inside an embedded Google Maps interface. While typical clients managed 2,000–5,000 road segments, a new prospective client required support for nearly 70,000, exceeding the practical limits of the existing system for displaying data.
         <br /><br />
-        The challenge was further complicated by an automated data collection system present in one of TotalPave&apos;s applications, the IRI application. Performance issues caused by display large road networks could interfere with data collection and potentially produce inaccurate survey results, making performance a critical requirement rather than a quality-of-life improvement.
+        The challenge was further complicated by an automated data collection system present in one of TotalPave&apos;s applications, the IRI application. Performance issues caused by displaying large road networks could interfere with data collection and potentially produce inaccurate survey results, making performance a critical requirement rather than a quality-of-life improvement.
         <br /><br />
-        Through experimentation, the Lead Developer and I determined that performance issues were not due to the quantity of geospatial data but rather how it was used.
+        Through investigation with the Lead Developer, we determined that the performance issues were not due to the quantity of geospatial data but rather how it was used.
         <br />
-        One of the IRI application&apos;s major quality of life features was displaying the roads in an embedded Google Maps in the application. This was valuable as clients were able to pause the automated data collection survey, view the map, and identify which roads still needed to be surveyed. 
+        The data displayed on map was an interactable block for every single road in the client&apos;s road network. This was the dominant performance constraint, all other factors that were explored were either already accounted for or their corrections had no meaningful impact for the prospective client&apos;s road network.
+        <br /><br />
+        To resolve this, we redesigned the feature using a tile-based system inspired by Google Maps. Instead of representing each road as an interactive block, we generated image tiles that can be displayed on top of Google Maps.
         <br />
-        This feature created an interactable object for every single road displayed on the map, creating the severe performance problems.
+        These images had a transparent background with the client&apos;s road network drawn over them, effectively creating a road highlight layer.
         <br /><br />
-        To address this, we took inspiration from how Google Maps displays its own map. Google Maps uses a tile-based rendering system. As users zoom and pan, Google Maps communicates with its servers to access and display pre-generated images. This can sometimes be visually seen in Google Maps itself, when tiles take a short moment to load you can sometimes see a rectangular shape that changes after a few seconds. The technical term for this system is called a Tile Layer.
+        There were a few major issues with this solution. This system of using images to display content on a map is a known pattern. You typically have a server that provides static images at a particular coordinate when requested. 
+        <br />
+        TotalPave&apos;s mobile applications all support full offline usage. Utilizing a server requires internet. 
+        <br />
+        Furthermore, data is often displayed differently depending on the zoom level. This can be seen in Google Maps, as you zoom in, the images become more detailed. Roads are bigger, small roads are no longer hidden, and buildings are shown. 
+        <br />
+        When TotalPave displays a client&apos;s road network, we color code roads based on collected road condition survey results. Data is often changing and we&apos;d need to frequently update these images for every single client across multiple zoom levels. The cost of updating images and holding them for every single client would be far too great to be economically justifiable. 
         <br /><br />
-        Our solution followed the same concept with notable differences. The Android/iOS Google Maps SDKs allow you to display your own tile layer on top of Google Maps. This can be used to replace the map images altogether, or to display additional information on top of the map images. Generally you host your own tile server that would contain pregenerated images and provide specific images when requested. There were multiple reasons why utilizing a Tile Server was not viable for TotalPave:
-        <ul>
-            <li>TotalPave&apos;s mobile applications all support and depend on offline usage. Tile Servers require internet.</li>
-            <li>The data we were rendering frequently changed. It included both the client&apos;s road network and color coding based on existing survey results. If we wanted to have static images, we would have to find a solution to generate these images for all of our clients, update them whenever existing survey data changed, and hold that data on one of our servers.</li>
-        </ul>
-        Instead, we took a very different approach: we generated the images on the client&apos;s device. To accomplish this, we built a C++ library that performed the following tasks:
+        To address these issues, we had to adapt common industry patterns to our offline and dynamic data constraints. We implemented a system that generated images on demand.
+        <br />
+        This system performed three overall tasks:
         <ol>
-            <li>Loading the client&apos;s data and organizing it in a data structure that mimicked tile servers.</li>
-            <li>When the Tile Layer requested an image at a particular coordinate, we would pass that request to the C++ library.</li>
-            <li>The C++ library would use the coordinate to efficiently obtain relevant data from the data structure.</li>
-            <li>The C++ library would then draw and color the roads on top of a transparent background, generating a tile image. This tile image would be given to the Tile Layer.</li>
+            <li>When the embedded Google Maps is first loaded, the system is also loaded. The system then loaded the client&apos;s data directly from the application&apos;s SQLite database.</li>
+            <li>After loading the data, the system organized it in a data structure that allows efficient access to data relevant to a particular part of the map.</li>
+            <li>The Google Maps SDK would ask for an image at a particular part of the map. The system would then obtain relevant data and produce the image.</li>
         </ol>
-        This system effectively produced a dynamic road highlight layer that was displayed on top of Google Maps. 
-        <br /><br />
-        The completed solution increased supported road network sizes from approximately twenty thousand roads to over one hundred thousand while maintaining acceptable performance on mobile devices.
-        <br /><br />
-        While the Lead Developer led this project, I made major contributions in identifying viable solutions, providing architectural input during design discussions, and implementing significant portions of the final system. This was a collaborative effort, with both of us contributing to the C++ library, native Android/iOS integration, and overall system implementation.
+        Furthermore, the project involved multiple layers of entirely different technologies.
         <br />
+        There is the Web Layer, which uses technologies like HTML, JavaScript, and CSS.
+        <br />
+        There is the Native Layer, which is Android and iOS applications. Android and iOS are isolated from each other, software teams often maintain two copies of their mobile applications, one for Android and one for iOS. 
+        <br /><br />
+        TotalPave uses a Native framework called Cordova. Cordova enables developers to build Native Android/iOS applications uses a Web Layer and Web Technologies. This is one way to share code between Android and iOS. 
+        <br /><br />
+        Web technologies were not suitable for this project. Part of the dominant performance problems involved how Cordova communicated between the Web and Native Layers.
+        <br />
+        This project instead utilized a third layer, the C++ Layer.
+        <br /><br />
+        Android and iOS use different technologies than C++. However, they are compatible with C++. You can write code in a C++ Layer and use it in both Android and iOS applications. This is not a simple process, there is work involved in connecting the C++ and Native Layers. 
+        <br /><br />
+        As a part of this project, the Lead Developer and I worked extensively with communicating between the three layers, Web, Native, and C++. 
+        <br />
+        The system that generated images on demand performed all three of its tasks within the C++ Layer.
+        <br />
+        In addition, we implemented bridges between the C++ and Native layers to properly connect the system with the Google Maps SDK.
+        <br />
+        Usage of this system starts in the Web Layer, and from there work travels between the C++ and Native Layers.
+        <br /><br />
+        The completed system increased supported road network size from ~20,000 segments to over 100,000 while maintaining acceptable performance on mobile devices under real-world survey conditions.
+        <br /><br />
+        While the Lead Developer led system design, I made significant contributions to solution discovery, architectural discussions, and core implementation across the C++ codebase and native Android/iOS integration.
+        <br /><br />
         The following provides a detailed technical breakdown of the challenges encountered, the architectural decisions made, and the solutions implemented.
         <h1>The IRI Application & Road Networks</h1>
         TotalPave produces software for the road maintenance industry. Clients provide TotalPave with the road network, the dataset of roads they are responsible for maintaining, and their workers use TotalPave&apos;s applications to perform road condition surveys.
