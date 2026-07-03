@@ -9,19 +9,19 @@ import DataModelBefore from '@TechnicalArticles/mtoSupport/DataModelBefore.txt';
 export function TotalPaveMTOSupportTechnicalArticle(props: ITotalPaveMTOSupportProps) {
     return <div className={TechnicalArticleLogic.getClassName(['TotalPaveMTOSupportTechnicalArticle'], props.className)}>
         <h1>Executive Summary</h1>
-        MTO Support transformed TotalPave&apos;s technology stack from a system designed around a single visual road condition survey standard, ASTM D6433 Rev 23, into a framework capable of supporting multiple standards.
+        MTO Support expanded TotalPave’s road condition survey platform from supporting a single industry standard (ASTM D6433 Rev 23) to a flexible framework capable of supporting multiple survey methodologies.
         <br /><br />
-        To support TotalPave&apos;s expansion into Ontario, Canada, I led the technical analysis required to support an additional visual road condition survey methodology. This involved reviewing Ministry of Transportation of Ontario (MTO) documentation, translating their methodology into software requirements, identifying conflicts with TotalPave&apos;s existing architecture, and presenting findings to the CEO and Lead Developer. From these findings, I collaborated with the Lead Developer on major architectural changes across TotalPave&apos;s technology stack.
+        This work was driven by TotalPave’s expansion into Ontario, Canada, which required compatibility with the Ministry of Transportation of Ontario (MTO) survey methodology. I led the technical analysis of the MTO documentation, translating it into software requirements, identifying conflicts with the existing system design, and presenting my findings to the CEO and Lead Developer. Based on this analysis, I collaborated with the Lead Developer on a large-scale redesign of the platform.
         <br /><br />
-        Due to ASTM D6433 Rev 23 assumptions being deeply embedded throughout TotalPave&apos;s systems, this project involved several major phases:
+        The project required a multi-phase system redesign due to deeply embedded assumptions in the original ASTM-based architecture:
         <ol>
-            <li>Overhauling the MySQL database into an Entity-Attribute-Value model.</li>
-            <li>Refactoring a Customer Web Portal, Mobile Application, and Server-side codebases to support a new standard of visual road condition surveys.</li>
-            <li>Implementing MTO Support within the newly developed framework.</li>
+            <li>Overhauling the database to resolve structural limitations that prevented support for multiple survey standards.</li>
+            <li>Refactoring the web portal, mobile application, and several backend systems to operate under a multi-standard model.</li>
+            <li>Implementing full support for the MTO survey methodology within the new framework.</li>
         </ol>
-        As a collaborative project, the Lead Developer and I both made significant contributions throughout the entire project, including architectural design, implementation, and identifying future scalability concerns.
+        This was a collaborative effort between myself and the Lead Developer, involving architectural design, implementation planning, and system-wide scalability analysis.
         <br /><br />
-        The following provides a detailed technical breakdown of the challenges encountered, the architectural decisions made, and the solutions implemented.
+        The following sections provide a detailed breakdown of the challenges encountered, the architectural decisions made, and the solutions implemented.
         <h1>The Problem</h1>
         TotalPave was looking to get into Ontario, Canada&apos;s market of data collection for the road maintenance industry. Ontario uses its own data collection methodology as recommended by the Ministry of Transportation of Ontario (MTO). 
         <br /><br />
