@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     border-top: 1px solid;
-    height: 50px;
+    padding: 10px;
     width: 100%;
 
     .col {
@@ -26,11 +26,15 @@
         .preferred {
             font-weight: bold;
         }
+
+        .linkedin {
+            margin: 2px 0;
+        }
     }
 }
 
 @media (max-width:975px) {
-    .Footer {
+    .Footer, .Footer .col {
         flex-direction: column;
 
         .Divider {
