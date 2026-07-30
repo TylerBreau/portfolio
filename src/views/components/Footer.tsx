@@ -13,6 +13,13 @@ export function Footer() {
         <Divider type={DividerType.DOT} />
         <address className='col'>
             <a className='email' href={`mailto:${EMAIL}`}>{EMAIL} (Preferred)</a>
+            <Divider type={DividerType.DOT} />
+            <a
+                className='linkedin'
+                href='https://www.linkedin.com/in/tyler-breau/'
+                rel='external noreferrer'
+                target='_blank'
+            ><img height="19" src='./LinkedInLogo.png' /></a>            
         </address>
     </div>;
 }
